@@ -1,0 +1,3 @@
+const SINGLE_CONCERT_ID = "694a6790325a3437a722d740";
+
+module.exports = {SINGLE_CONCERT_ID};

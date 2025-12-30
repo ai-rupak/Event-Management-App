@@ -1,0 +1,83 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url=env("MONGO_URI")
+}
+
+model User {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  email        String?   @unique
+  password     String?
+  googleId     String?   @unique
+  refreshToken String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  profile      Profile?
+  bookings     Booking[]
+}
+
+model Profile {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @unique @db.ObjectId
+  name        String?
+  phoneNumber String?
+  gender      String?
+  birthday    DateTime?
+  state       String?
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Concert {
+  id             String           @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl       String?
+  name           String
+  date           DateTime
+  venue          String
+  gatesOpenTime  DateTime?
+  about          String?
+  languages      String?
+  organizedBy    String?
+  totalSeats     Int
+  availableSeats Int
+  categories     TicketCategory[]
+  bookings       Booking[]
+}
+
+model TicketCategory {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  concertId      String    @db.ObjectId
+  name           String
+  price          Float
+  totalSeats     Int
+  availableSeats Int
+  concert        Concert   @relation(fields: [concertId], references: [id])
+  bookings       Booking[]
+}
+
+model Booking {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String         @db.ObjectId
+  concertId String         @db.ObjectId
+  categoryId String        @db.ObjectId
+  seats     Int
+  status    String
+  bookedAt  DateTime       @default(now())
+  expiresAt DateTime?
+  user      User           @relation(fields: [userId], references: [id])
+  concert   Concert        @relation(fields: [concertId], references: [id])
+  category  TicketCategory @relation(fields: [categoryId], references: [id])
+}
+
+model BookingQueue {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  concertId String   @db.ObjectId
+  position  Int
+  enteredAt DateTime @default(now())
+  timeSlot  DateTime?
+  status    String
+}
