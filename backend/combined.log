@@ -1519,3 +1519,4 @@
 {"level":"info","message":"Server is running on port 3000","timestamp":"2025-12-30T07:06:14.194Z"}
 {"count":0,"duration":890,"level":"info","message":"Clean expired bookings","timestamp":"2025-12-30T07:07:15.092Z"}
 {"count":0,"duration":98,"level":"info","message":"Clean expired bookings","timestamp":"2025-12-30T07:08:14.312Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2025-12-30T07:09:14.279Z"}
