@@ -32,7 +32,7 @@ export default function OtpScreen() {
       console.log("data object", data);
       await setTokens(data.accessToken, data.refreshToken);
 
-      router.reload("/");
+      router.push("/");
     },
     onError: (error) => {
       console.error("Error", error);

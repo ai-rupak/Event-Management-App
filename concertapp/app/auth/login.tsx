@@ -11,11 +11,39 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import { loginEmail } from "@/api/authApi";
+import { useMutation } from "@tanstack/react-query";
+import { useAuthStore } from "@/stores/authStore";
 
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const setTokens = useAuthStore(state => state.setTokens);
+  const setUser = useAuthStore(state => state.setUser);
+
+  const mutation = useMutation({
+    mutationFn: loginEmail,
+    onSuccess: async (data) => {
+      // const { accessToken, refreshToken, user } = data;
+
+      // // 🔐 Save tokens
+      // await setTokens(accessToken, refreshToken);
+
+      // // 👤 Save user
+      // setUser(user);
+
+      // 🚫 DO NOT navigate manually
+      // RootLayout will auto-redirect to (tabs)
+    },
+    onError: (error) => {
+      console.error("Login error", error);
+    },
+  });
+  const handleLogin = () => {
+    if (!email || !password) return;
+    mutation.mutate({ email, password });
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-black">
@@ -57,7 +85,7 @@ const login = () => {
             />
           </View>
 
-          <Pressable className="bg-white rounded-full py-3 items-center mb-2">
+          <Pressable onPress={handleLogin} className="bg-white rounded-full py-3 items-center mb-2">
             <Text className="text-black font-semibold">Continue</Text>
           </Pressable>
 

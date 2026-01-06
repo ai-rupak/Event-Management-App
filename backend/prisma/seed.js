@@ -1,5 +1,8 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+require("dotenv").config({ path: require("path").resolve(__dirname, "../.env") });
+
+
 
 async function seed() {
   const concert = await prisma.concert.create({

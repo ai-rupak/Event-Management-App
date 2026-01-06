@@ -1,3 +1,5 @@
+const logger = require("../config/logger");
+
 const validationMiddleware = (schema)=>(req,res,next)=>{
     try {
         schema.parse(req.body);
@@ -7,4 +9,5 @@ const validationMiddleware = (schema)=>(req,res,next)=>{
         res.status(400).json({ error: error.message });
     }
 }
+
 module.exports= {validationMiddleware};

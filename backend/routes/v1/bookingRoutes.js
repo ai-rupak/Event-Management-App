@@ -5,6 +5,8 @@ const {
   getPendingBookingCtrl,
   cancelPendingBookingCtrl,
   createBookingCtrl,
+  getConfirmedBookingCtrl,
+  getUserBookingsCtrl,
 } = require("../../controllers/bookingController");
 const { authLimiter } = require("../../middlewares/rateLimit");
 const { validationMiddleware } = require("../../middlewares/validation");
@@ -21,6 +23,8 @@ router.post(
 );
 
 router.patch("/:id/confirm", authMiddleware, confirmBookingCtrl);
+router.get("/confirmed/:bookingId",authMiddleware,getConfirmedBookingCtrl);
+router.get("/mine",authMiddleware,getUserBookingsCtrl)
 router.get("/pending", authMiddleware, getPendingBookingCtrl);
 router.delete("/pending", authMiddleware, cancelPendingBookingCtrl);
 

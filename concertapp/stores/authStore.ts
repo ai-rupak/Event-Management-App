@@ -36,32 +36,34 @@ export const useAuthStore = create<AuthState>((set) => ({
 }));
 
 
-export const loadTokens = async()=>{
-    useAuthStore.getState().setLoading(true);
+export const loadTokens = async () => {
+  useAuthStore.getState().setLoading(true);
 
-    try {
-        const access = await SecureStore.getItemAsync('accessToken');
-        const refresh = await SecureStore.getItemAsync('refreshToken');
+  try {
+    const access = await SecureStore.getItemAsync("accessToken");
+    const refresh = await SecureStore.getItemAsync("refreshToken");
 
-        if(access && refresh){
-            const decoded = jwtDecode<{exp:number}>(access);
-            const isExpired = decoded.exp * 1000 < Date.now();
+    if (access && refresh) {
+      const decoded = jwtDecode<{ exp: number }>(access);
+      const isExpired = decoded.exp * 1000 < Date.now();
 
-            if(isExpired){
-                try {
-                    const response = await axios.post(`${API_BASE}/auth/refresh`,{refreshToken:refresh});
-                    const {accessToken :newAccess , refreshToken :newRefresh} = response.data;
-                    await useAuthStore.getState().setTokens(newAccess,newRefresh);
-                    
-                } catch (error) {
-                    console.error("Error refreshing token:", error);
-                    await useAuthStore.getState().logout();
-                }
-            }
-        }
-    } catch (error) {
-        console.error("Error loading tokens:", error);
-    }finally{
-        useAuthStore.getState().setLoading(false);
+      if (isExpired) {
+        // 🔁 refresh token
+        const response = await axios.post(`${API_BASE}/auth/refresh`, {
+          refreshToken: refresh,
+        });
+
+        const { accessToken, refreshToken } = response.data;
+        await useAuthStore.getState().setTokens(accessToken, refreshToken);
+      } else {
+        // ✅ RESTORE tokens into Zustand
+        useAuthStore.getState().setTokens(access, refresh);
+      }
     }
-}
+  } catch (error) {
+    console.error("Error loading tokens:", error);
+    await useAuthStore.getState().logout();
+  } finally {
+    useAuthStore.getState().setLoading(false);
+  }
+};

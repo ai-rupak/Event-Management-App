@@ -51,45 +51,49 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-  const {accessToken,isLoading} = useAuthStore();
+  const { accessToken, isLoading } = useAuthStore();
   const segments = useSegments();
-  
 
-  useEffect(()=>{
-    loadTokens();
-  },[]);
-
-  
+  // Load tokens ONCE
   useEffect(() => {
-    if(!isLoading){
-      <View className='flex-1 justify-center items-center'>
-        <ActivityIndicator size={"large"}/>
-      </View>
-    }
+    if (!isLoading && accessToken !== undefined) return;
+    loadTokens();
+  }, []);
+
+  // Auth-based routing
+  useEffect(() => {
+    if (isLoading) return;
 
     const inAuthGroup = segments[0] === "auth";
 
-    if(!accessToken && !inAuthGroup) {
-      router.replace("/auth")
-    }else{
-      router.replace("/(tabs)")
+    if (!accessToken && !inAuthGroup) {
+      router.replace("/auth/login");
     }
-    
-  
-    
-  }, [accessToken,isLoading,useSegments,router]);
-  
+
+    if (accessToken && inAuthGroup) {
+      router.replace("/(tabs)");
+    }
+  }, [accessToken, isLoading, segments]);
+
+  // ✅ Show loader while checking auth
+  if (isLoading) {
+    return (
+      <View className="flex-1 justify-center items-center">
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 
   return (
     <QueryProvider>
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false , gestureEnabled: true , animation:'fade' }} initialRouteName='auth'>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="auth" options={{ headerShown: false }} />
-        <Stack.Screen name="book" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="auth" />
+          <Stack.Screen name="book" />
+          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        </Stack>
+      </ThemeProvider>
     </QueryProvider>
   );
 }

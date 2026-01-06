@@ -136,7 +136,7 @@ const languagesDisplay = concert.languages? `Event will be in ${concert.language
             
           
 
-          // Event Details and Information View
+          
           <Text className="text-gray-200 text-lg font-semibold mb-3">About the Event</Text>
           <Text className="text-gray-400 text-sm leading-5 mb-6">{concert?.about}</Text>
 

@@ -45,6 +45,7 @@ export default function ReviewScreen() {
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null);
 
   const hasInitializedTimer = useRef(false);
+  const hasTriedCreation = useRef(false); // NEW: Track if we've attempted creation
 
   const tickets = useBookingStore((s) => s.tickets);
   const removeTicket = useBookingStore((s) => s.removeTicket);
@@ -53,7 +54,6 @@ export default function ReviewScreen() {
   const clearCart = useBookingStore((s) => s.clearCart);
 
   const categoryId = tickets[0]?.sectionId;
-
   const totalSeats = tickets.reduce((sum, t) => sum + t.quantity, 0);
 
   const { data: pendingBooking, isLoading: pendingLoading } = useQuery({
@@ -63,8 +63,9 @@ export default function ReviewScreen() {
   });
 
   const createMutation = useMutation({
-    mutationFn: (data) => createBooking(data),
+    mutationFn: (data: { categoryId: string; seats: number }) => createBooking(data),
     onSuccess: (data: Booking) => {
+      console.log("✅ Booking created successfully:", data);
       setBooking(data);
       setExpiresAt(new Date(data.expiresAt));
       setQueueStatus(null);
@@ -73,14 +74,14 @@ export default function ReviewScreen() {
       });
     },
     onError: (err: any) => {
-      console.error("Create booking error",err.response?.data || err.message);
-      Alert.alert("Error", "Failed to reserve the tickets" + (err?.message || ""));
+      console.error("❌ Create booking error", err.response?.data || err.message);
+      Alert.alert("Error", "Failed to reserve the tickets: " + (err?.message || ""));
       router.back();
     },
   });
 
   const confirmMutation = useMutation({
-    mutationFn: (bookingId:string) => confirmBooking(bookingId),
+    mutationFn: (bookingId: string) => confirmBooking(bookingId),
     onSuccess: (data, bookingId) => {
       clearCart();
       queryClient.invalidateQueries({
@@ -89,70 +90,42 @@ export default function ReviewScreen() {
       router.replace(`/book/confirmation?bookingId=${bookingId}`);
     },
     onError: (err: any) => {
-      Alert.alert("Error", "Failed to confirm", err?.message);
+      Alert.alert("Error", "Failed to confirm: " + (err?.message || ""));
     },
   });
 
-    if (createMutation.isPending || concertLoading || pendingLoading) {
-      return (
-        <SafeAreaView className="flex-1 bg-black justify-center items-center">
-          <ActivityIndicator size={"large"} color={"#fff"} />
-        </SafeAreaView>
-      );
-    }
-
-    if (createMutation.isError || !concert || !categoryId) {
-      return (
-        <SafeAreaView className="flex-1 bg-black justify-center items-center">
-          <Text className="text-red-500">
-            Error:
-            {createMutation.error?.message || "No tickets selected"}
-          </Text>
-          <Pressable onPress={() => router.back()}>
-            <Text className="text-white">Go Back</Text>
-          </Pressable>
-        </SafeAreaView>
-      );
-    }
-
-
-  useEffect(()=>{
-    if(expiresAt){
+  // Timer effect - runs when expiresAt is set
+  useEffect(() => {
+    if (expiresAt) {
       const now = new Date().getTime();
-      let diff = Math.floor(
-        (new Date(pendingBooking.expiresAt).getTime() - now) /1000
-      );
+      let diff = Math.floor((expiresAt.getTime() - now) / 1000);
 
-      console.log("Timer init diff from backend" , diff);
-      if(diff <=-30){
-        handleExpiry(false);
-        return;
-      }else if(diff<=0){
+      console.log("⏱️ Timer init diff from backend:", diff);
+      
+      if (diff <= -30 || diff <= 0) {
         handleExpiry(false);
         return;
       }
 
       hasInitializedTimer.current = true;
-      setSecondsLeft(Math.max(0,diff));
+      setSecondsLeft(Math.max(0, diff));
 
-      const id = setInterval(()=>{
-        const updateDiff = Math.floor(
-          (expiresAt.getTime() - Date.now())/1000
-        );
+      const id = setInterval(() => {
+        const updateDiff = Math.floor((expiresAt.getTime() - Date.now()) / 1000);
+        setSecondsLeft(Math.max(0, updateDiff));
 
-        if(updateDiff <=0){
+        if (updateDiff <= 0) {
           clearInterval(id);
           handleExpiry();
         }
       }, 1000);
 
-      return ()=> clearInterval(id);
+      return () => clearInterval(id);
     }
   }, [expiresAt]);
 
   const handleExpiry = (showAlert = true) => {
-  if (hasInitializedTimer.current || showAlert) {
-    console.log("Expiry triggered", { showAlert });
+    console.log("⏰ Expiry triggered", { showAlert });
     if (showAlert) {
       Alert.alert(
         "Time expired",
@@ -163,91 +136,119 @@ export default function ReviewScreen() {
     setBooking(null);
     setExpiresAt(null);
     setQueueStatus(null);
+    hasInitializedTimer.current = false;
+    hasTriedCreation.current = false;
     queryClient.invalidateQueries({ queryKey: ["pendingBooking"] });
     router.replace("/book");
-  }
-};
+  };
 
+  // Check for expired pending booking
   useEffect(() => {
-    if (pendingBooking && expiresAt) {
+    if (pendingBooking && !booking) {
       const now = new Date().getTime();
       const diff = Math.floor(
         (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
       );
 
       if (diff <= 0) {
-        console.log("Frontend detected expired pending (skew?), invalidating");
-        queryClient.setQueryData(["pendingBooking", categoryId], null); // Force null
+        console.log("⚠️ Frontend detected expired pending, invalidating");
+        queryClient.setQueryData(["pendingBooking", categoryId], null);
         handleExpiry(false);
         return;
       }
     }
-  }, [pendingBooking, categoryId]);
+  }, [pendingBooking, categoryId, booking]);
 
- const handleConfirm = () =>{
-  if(!booking?.id){
-    Alert.alert("Error","No booking to confirm");
-    return;
-  }
-  confirmMutation.mutate(booking.id);
+  const handleConfirm = () => {
+    if (!booking?.id) {
+      Alert.alert("Error", "No booking to confirm");
+      return;
+    }
+    confirmMutation.mutate(booking.id);
+  };
 
- };
-
+  // MAIN LOGIC: Load existing pending OR create new booking
   useEffect(() => {
-    if (
-      !concertLoading &&
-      concert &&
-      !booking &&
-      !createMutation.isPending &&
-      !pendingLoading &&
-      categoryId
-    ) {
-      console.log(
-        "Review mount: checking pending for category",
-        categoryId,
-        pendingBooking
+    // Wait for all data to load
+    if (concertLoading || pendingLoading || !concert || !categoryId) {
+      console.log("⏳ Waiting for data...", { concertLoading, pendingLoading, concert: !!concert, categoryId });
+      return;
+    }
+
+    // Already have a booking set
+    if (booking) {
+      console.log("✓ Booking already set:", booking.id);
+      return;
+    }
+
+    // Already creating
+    if (createMutation.isPending) {
+      console.log("⏳ Create mutation in progress...");
+      return;
+    }
+
+    // Already tried to create
+    if (hasTriedCreation.current) {
+      console.log("✓ Already attempted creation");
+      return;
+    }
+
+    console.log("🔍 Review mount: checking pending for category", categoryId);
+    console.log("📦 Pending booking:", pendingBooking);
+    console.log("🎫 Tickets in store:", tickets);
+
+    // Case 1: Existing pending booking
+    if (pendingBooking) {
+      const now = new Date().getTime();
+      let diff = Math.floor(
+        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
       );
-      if (pendingBooking) {
-        const now = new Date().getTime();
-        let diff = Math.floor(
-          (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
+
+      if (diff <= 0) {
+        console.log("❌ Mount: Skipping expired pending");
+        queryClient.setQueryData(["pendingBooking", categoryId], null);
+        handleExpiry(false);
+        return;
+      }
+
+      console.log("✅ Loading existing pending booking:", pendingBooking);
+      clearCart();
+      useBookingStore
+        .getState()
+        .addTicket(
+          pendingBooking.category.id,
+          pendingBooking.category.name,
+          pendingBooking.category.price,
+          pendingBooking.seats
         );
 
-        if (diff <= 0) {
-          console.log("Mount: Skipping expired pending");
-          queryClient.setQueryData(["pendingBooking", categoryId], null);
-          handleExpiry(false);
-          return;
-        }
+      setBooking(pendingBooking);
+      setExpiresAt(new Date(pendingBooking.expiresAt));
+      setQueueStatus(null);
+      hasTriedCreation.current = true;
+      return;
+    }
 
-        console.log("Loading existing pending for categories", pendingBooking);
-        clearCart();
-        useBookingStore
-          .getState()
-          .addTicket(
-            pendingBooking.category.id,
-            pendingBooking.category.name,
-            pendingBooking.category.price,
-            pendingBooking.seats
-          );
-
-        setBooking(pendingBooking);
-        setExpiresAt(new Date(pendingBooking.expiresAt));
-        setQueueStatus(null);
-      } else if (tickets.length < 0) {
-        createMutation.mutate({ categoryId, seats: totalSeats });
-      } else {
-        // router.back();
-      }
+    // Case 2: Create new booking
+    // FIXED: Changed tickets.length < 0 to tickets.length > 0
+    if (tickets.length > 0 && totalSeats > 0) {
+      console.log("🚀 Creating new booking:", { categoryId, totalSeats });
+      hasTriedCreation.current = true;
+      createMutation.mutate({ categoryId, seats: totalSeats });
+    } else {
+      console.log("⚠️ No tickets to create booking with");
+      Alert.alert("No Tickets", "Please select tickets first");
+      router.back();
     }
   }, [
     concertLoading,
-    concert?.id,
+    pendingLoading,
+    concert,
     categoryId,
     booking,
     createMutation.isPending,
-    pendingLoading,
     pendingBooking,
+    tickets.length,
     totalSeats,
   ]);
 
@@ -261,147 +262,205 @@ export default function ReviewScreen() {
   const venue = concert?.venue || "";
 
   const datetime = concert
-  ? new Date(concert.date).toLocaleString("en-US", {
-      weekday: "short",
-      day: "numeric",
-      month: "short",
-      hour: "numeric",
-      minute: "numeric",
-      hour12: true,
-    })
-  : "";
+    ? new Date(concert.date).toLocaleString("en-US", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      })
+    : "";
 
   const orderAmount = getTotal();
-  const bookingFee = Math.max(0,Math.round(orderAmount * 0.0826));
+  const bookingFee = Math.max(0, Math.round(orderAmount * 0.0826));
   const grandTotal = orderAmount + bookingFee;
 
-  const ticketsSummary = useMemo(()=> tickets.map((t)=>({
-    id: t.sectionId,
-    title:t.name,
-    price:t.price,
-    qty:t.quantity,
-    lineTotal:t.price * t.quantity
-  })),[tickets]);
+  const ticketsSummary = useMemo(
+    () =>
+      tickets.map((t) => ({
+        id: t.sectionId,
+        title: t.name,
+        price: t.price,
+        qty: t.quantity,
+        lineTotal: t.price * t.quantity,
+      })),
+    [tickets]
+  );
 
-//   function handlePayNow(){
-//     if(ticketsSummary.length ==0 || !booking){ 
-//       Alert.alert("No Tickets","Please select tickets to proceed");
-//       return;
-//     }
-//     confirmMutation.mutate(booking?.id);
-// }
-console.log("tickets",booking)
+  console.log("📊 Review State:", {
+    booking: booking?.id,
+    pendingBooking: pendingBooking?.id,
+    tickets: tickets.length,
+    secondsLeft,
+  });
+
+  const isLoading = createMutation.isPending || concertLoading || pendingLoading;
+  const isError = createMutation.isError || !concert || !categoryId;
+
   return (
     <SafeAreaView className="flex-1 bg-black">
-      <View className="px-4 pt-3 pb-2">
-        <View className="flex-row items-center">
-          <Pressable className="p-2 rounded-full" onPress={() => router.back()}>
-            <Ionicons name="arrow-back" size={24} color="white" />
+      {isLoading ? (
+        <View className="flex-1 justify-center items-center">
+          <ActivityIndicator size="large" color="#fff" />
+          <Text className="text-white mt-2">
+            {createMutation.isPending ? "Reserving tickets..." : "Loading..."}
+          </Text>
+        </View>
+      ) : isError ? (
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-red-500">
+            Error: {createMutation.error?.message || "No tickets selected"}
+          </Text>
+          <Pressable
+            onPress={() => router.back()}
+            className="mt-4 px-6 py-3 bg-gray-700 rounded-lg"
+          >
+            <Text className="text-white">Go Back</Text>
           </Pressable>
-
-          <View className="ml-3">
-            <Text className="text-white text-lg font-semibold">
-              Review your booking
-            </Text>
-          </View>
         </View>
+      ) : (
+        <>
+          <View className="px-4 pt-3 pb-2">
+            <View className="flex-row items-center">
+              <Pressable className="p-2 rounded-full" onPress={() => router.back()}>
+                <Ionicons name="arrow-back" size={24} color="white" />
+              </Pressable>
 
-        <View className="px-4">
-          <View className="bg-[#1a1a1a] rounded-full px-4 py-2 items-center justify-center mb-4">
-            <Text className="text-gray-300">
-              Complete your booking in{" "}
-              <Text className="text-green-400 font-semibold">
-                {mm}:{ss}
-              </Text>{" "}
-              mins
-            </Text>
-          </View>
-        </View>
-      </View>
-
-    
-      <ScrollView className="px-4"
-      contentContainerStyle={{paddingBottom:180}}>
-        <View className="flex-row items-start mb-4">
-            <Image 
-            resizeMode="cover"
-            className="w-16 h-20 rounded-md mr-3"
-            source={{uri:posterUri}}
-            />
-
-            <View className="flex-1">
-                <Text className="text-white font-semibold mb-1">
-                    {eventTitle}
+              <View className="ml-3">
+                <Text className="text-white text-lg font-semibold">
+                  Review your booking
                 </Text>
-                <Text className="text-gray-400">{venue}</Text>
+              </View>
             </View>
-        </View>
 
-        <View className="bg-[#111] border border-gray-800 rounded-2xl px-4 py-4 mb-5 ">
-            <Text className="text-gray-300 font-semibold mb-3">{datetime}</Text>
+            <View className="px-4 mt-3">
+              <View className="bg-[#1a1a1a] rounded-full px-4 py-2 items-center justify-center mb-4">
+                <Text className="text-gray-300">
+                  Complete your booking in{" "}
+                  <Text className="text-green-400 font-semibold">
+                    {mm}:{ss}
+                  </Text>{" "}
+                  mins
+                </Text>
+              </View>
+            </View>
+          </View>
 
-            {ticketsSummary.length == 0 ? (
+          <ScrollView
+            className="flex-1 px-4"
+            contentContainerStyle={{ paddingBottom: 180 }}
+          >
+            <View className="flex-row items-start mb-4">
+              <Image
+                resizeMode="cover"
+                className="w-16 h-20 rounded-md mr-3"
+                source={{ uri: posterUri }}
+              />
+
+              <View className="flex-1">
+                <Text className="text-white font-semibold mb-1">{eventTitle}</Text>
+                <Text className="text-gray-400">{venue}</Text>
+              </View>
+            </View>
+
+            <View className="bg-[#111] border border-gray-800 rounded-2xl px-4 py-4 mb-5">
+              <Text className="text-gray-300 font-semibold mb-3">{datetime}</Text>
+
+              {ticketsSummary.length === 0 ? (
                 <Text className="text-gray-400 mb-3">No tickets selected</Text>
-            ):(ticketsSummary.map((t)=>(
-                <View key={t.id} className="mb-3">
+              ) : (
+                ticketsSummary.map((t) => (
+                  <View key={t.id} className="mb-3">
                     <View className="flex-row justify-between items-start">
-                        <View className="flex-1 pr-3">
+                      <View className="flex-1 pr-3">
+                        <Text className="text-white font-semibold">
+                          {t.qty} x {t.title}
+                        </Text>
+                      </View>
 
-                            <Text className="text-white font-semibold">
-                                {t.qty} x {t.title}
-                            </Text>
-                        </View>
-
-                        <View className="items-end">
-                            <Text className="text-white font-semibold">
-                                ₹ {t.lineTotal.toLocaleString()}
-                            </Text>
-                            <Pressable className="mt-2">
-                                <Text className="text-gray-400 underline">Remove</Text>
-                            </Pressable>
-                        </View>
+                      <View className="items-end">
+                        <Text className="text-white font-semibold">
+                          ₹ {t.lineTotal.toLocaleString()}
+                        </Text>
+                      </View>
                     </View>
 
                     <View className="flex-row items-center mt-3">
-                        <View className="w-8 h-8 rounded-md bg-gray-800 p-1 mr-3 items-center justify-center">
-                            <Ionicons name="ticket-outline" size={16} color={"#9ca3af"} />
-                        </View>
-                        <Text className="text-gray-400 text-sm">M-Ticket: Entry using the QR code in your app</Text>
+                      <View className="w-8 h-8 rounded-md bg-gray-800 p-1 mr-3 items-center justify-center">
+                        <Ionicons
+                          name="ticket-outline"
+                          size={16}
+                          color={"#9ca3af"}
+                        />
+                      </View>
+                      <Text className="text-gray-400 text-sm">
+                        M-Ticket: Entry using the QR code in your app
+                      </Text>
                     </View>
-                </View>
-            )))
-            }
-        </View>
-      </ScrollView>
-
-      <View className="absolute bottom-4 left-0 right-0 border-t border-gray-800 p-3 flex-row items-center justify-between">
-        <View className="flex-row items-center">
-            <View className="bg-white rounded-md px-2 py-1 mr-3">
-                <Ionicons name="wallet-outline" size={18} color={"#111"} />
+                  </View>
+                ))
+              )}
             </View>
+          </ScrollView>
 
-            <View>
+          <View className="absolute bottom-4 left-0 right-0 border-t border-gray-800 p-3 flex-row items-center justify-between">
+            <View className="flex-row items-center">
+              <View className="bg-white rounded-md px-2 py-1 mr-3">
+                <Ionicons name="wallet-outline" size={18} color={"#111"} />
+              </View>
+
+              <View>
                 <Text className="text-gray-400 text-xs">Pay Using</Text>
                 <Text className="text-white font-semibold">Google Pay UPI</Text>
+              </View>
             </View>
-        </View>
 
-        <Pressable className="bg-white rounded-full flex-row items-center px-6 py-3"
-        onPress={handleConfirm}
-        disabled={confirmMutation.isPending || secondsLeft <=0 || !booking}
-        >
-            <View className="mr-4 items-end">
-                <Text className="text-gray-500 text-xs">
-                    ₹ {grandTotal.toFixed(1)}
+            <Pressable
+              className={`rounded-full flex-row items-center px-6 py-3 ${
+                confirmMutation.isPending || secondsLeft <= 0 || !booking
+                  ? "bg-gray-600"
+                  : "bg-white"
+              }`}
+              onPress={handleConfirm}
+              disabled={confirmMutation.isPending || secondsLeft <= 0 || !booking}
+            >
+              <View className="mr-4 items-end">
+                <Text
+                  className={`text-xs ${
+                    confirmMutation.isPending || secondsLeft <= 0 || !booking
+                      ? "text-gray-400"
+                      : "text-gray-500"
+                  }`}
+                >
+                  ₹ {grandTotal.toFixed(1)}
                 </Text>
-                <Text className="text-black font-semibold text-sm">Total</Text>
-            </View>
-            {confirmMutation.isPending ? (
+                <Text
+                  className={`font-semibold text-sm ${
+                    confirmMutation.isPending || secondsLeft <= 0 || !booking
+                      ? "text-gray-300"
+                      : "text-black"
+                  }`}
+                >
+                  Total
+                </Text>
+              </View>
+              {confirmMutation.isPending ? (
                 <ActivityIndicator size="small" color="#000" className="mr-2" />
-            ):null}
-            <Text className="text-black font-semibold">{confirmMutation.isPending? "Confirming...":"Pay now"}</Text>
-        </Pressable>
-      </View>
+              ) : null}
+              <Text
+                className={`font-semibold ${
+                  confirmMutation.isPending || secondsLeft <= 0 || !booking
+                    ? "text-gray-300"
+                    : "text-black"
+                }`}
+              >
+                {confirmMutation.isPending ? "Confirming..." : "Pay now"}
+              </Text>
+            </Pressable>
+          </View>
+        </>
+      )}
     </SafeAreaView>
   );
 }

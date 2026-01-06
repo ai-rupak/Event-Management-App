@@ -16,6 +16,8 @@ app.use(cors());             // Enables Cross-Origin Resource Sharing
 app.use(express.json());     // Allows the server to parse JSON request bodies
 app.use(globalRateLimiter);
 app.use(errorHandler);  // Centralized error handling
+app.use(express.urlencoded({ extended: true }));
+
 
 app.use("/api", routes);
 

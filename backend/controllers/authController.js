@@ -1,5 +1,6 @@
 const { log } = require("winston");
-const { signUpEmail, verifyOTP, login, refresh, logout } = require("../services/authService")
+const { signUpEmail, verifyOTP, login, refresh, logout } = require("../services/authService");
+const logger = require("../config/logger.js");
 
 
 
@@ -67,6 +68,7 @@ const logoutCtrl = async(req,res)=>{
         res.status(500).json({ error: error.message });
     }
 }
+
 
 module.exports={
     signUpEmailCtrl,

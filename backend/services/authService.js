@@ -8,6 +8,8 @@ const {
   verifyToken,
 } = require("../utils/jwt");
 const { sendWelcomeEmail, sendOTP } = require("./emailService");
+const logger = require("../config/logger");
+
 
 const redis = new Redis(process.env.REDIS_URL);
 
@@ -22,9 +24,10 @@ const generateNumericOTP = () => {
 };
 
 const signUpEmail = async (data) => {
+  
   const { name, email, password } = data;
-
-  const existingUser = await prisma.findUnique({ where: { email } });
+  logger.info("Signup attempt", { email });
+  const existingUser = await prisma.user.findUnique({ where: { email } });
 
   if (existingUser) {
     throw new Error("User already exists with this email");
@@ -54,6 +57,7 @@ const signUpEmail = async (data) => {
 
   return { message: "Otp sent to email for verification" };
 };
+
 
 const verifyOTP = async (data) => {
   const { email, otp } = data;

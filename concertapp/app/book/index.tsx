@@ -21,6 +21,7 @@ const COLOR_MAP: Record<string, { color: string; border: string }> = {
   gold: { color: "#E7DEF9", border: "#C6B4F2" },
   silver: { color: "#CFF3E8", border: "#8ED6C0" },
 };
+
 export default function BookConcertScreen() {
   const router = useRouter();
 

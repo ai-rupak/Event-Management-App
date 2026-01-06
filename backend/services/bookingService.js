@@ -33,7 +33,7 @@ const createBooking = async (userId, data) => {
     );
   }
 
-  const queueStatus = await getQueueStatus(userId, SINGLE_CONCERT_ID);
+  // const queueStatus = await getQueueStatus(userId, SINGLE_CONCERT_ID);
 
   // if (
   //   queueStatus.highDemand &&
@@ -177,10 +177,64 @@ const cleanExpiredBookings = async () => {
   );
 };
 
+
+const getConfirmedBooking = async (userId, bookingId) => {
+  return await prisma.booking.findFirst({
+    where: {
+      id: bookingId,
+      userId,
+      status: "confirmed"
+    },
+    include: {
+      category: {
+        select: { id: true, name: true, price: true }
+      },
+      concert: {
+        select: {
+          id: true,
+          name: true,
+          venue: true,
+          date: true,
+          imageUrl: true
+        }
+      }
+    }
+  })
+}
+
+const getUserBookings = async (userId) => {
+  return await prisma.booking.findMany({
+    where: {
+      userId,
+      status: "confirmed", // Only confirmed
+    },
+    include: {
+      concert: {
+        select: {
+          id: true,
+          name: true,
+          venue: true,
+          date: true,
+          imageUrl: true,
+        },
+      },
+      category: {
+        select: {
+          id: true,
+          name: true,
+          price: true,
+        },
+      },
+    },
+    orderBy: { bookedAt: "desc" }, // ← FIXED: Use bookedAt (your model's timestamp)
+  });
+};
 module.exports = {
     createBooking,
     confirmBooking,
     getPendingBookings,
     cleanExpiredBookings,
-    cancelPendingBooking
+    cancelPendingBooking,
+    getConfirmedBooking,
+    getUserBookings
 };

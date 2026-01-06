@@ -72,34 +72,6 @@ export default function TicketScreen() {
   }
 })
 
-  if (!categoryData) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <Text className="text-white">Category not found</Text>
-        <Pressable onPress={() => router.back()}>
-          <Text className="text-white">Go Back</Text>
-        </Pressable>
-      </SafeAreaView>
-    );
-  }
-
-  if (pendingLoading) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <ActivityIndicator size={"large"} color={"#fff"} />
-        <Text className="text-white mt-2">Checking Session...</Text>
-      </SafeAreaView>
-    );
-  }
-
-  if (concertLoading) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <ActivityIndicator size={"large"} color={"#fff"} />
-        <Text className="text-white mt-2">Loading Concert ...</Text>
-      </SafeAreaView>
-    );
-  }
 
   const tickets = useBookingStore((s) => s.tickets);
   const addTicket = useBookingStore((s) => s.addTicket);
@@ -192,6 +164,36 @@ export default function TicketScreen() {
       updateQuantity(categoryId as string, myTicket.quantity + 1);
     }
   };
+
+    if (!categoryData) {
+    return (
+      <SafeAreaView className="flex-1 bg-black justify-center items-center">
+        <Text className="text-white">Category not found</Text>
+        <Pressable onPress={() => router.back()}>
+          <Text className="text-white">Go Back</Text>
+        </Pressable>
+      </SafeAreaView>
+    );
+  }
+
+  if (pendingLoading) {
+    return (
+      <SafeAreaView className="flex-1 bg-black justify-center items-center">
+        <ActivityIndicator size={"large"} color={"#fff"} />
+        <Text className="text-white mt-2">Checking Session...</Text>
+      </SafeAreaView>
+    );
+  }
+
+  if (concertLoading) {
+    return (
+      <SafeAreaView className="flex-1 bg-black justify-center items-center">
+        <ActivityIndicator size={"large"} color={"#fff"} />
+        <Text className="text-white mt-2">Loading Concert ...</Text>
+      </SafeAreaView>
+    );
+  }
+
 
   const handleRemove = () => {
     if (isActiveSession) return;
