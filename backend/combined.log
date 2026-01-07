@@ -3119,3 +3119,15 @@
 {"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:50:58.280Z"}
 {"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:51:58.283Z"}
 {"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:52:58.296Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:53:58.301Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:54:58.309Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:55:58.323Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:56:58.316Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:57:58.332Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:58:58.350Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:59:58.357Z"}
+{"bookingId":"695e3ce92d55192d5fdd91be","expiresAt":"2026-01-07T11:10:57.676Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T11:00:58.085Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:00:58.366Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T11:01:05.883Z"}
+{"bookingId":"695e3ce92d55192d5fdd91be","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T11:01:05.884Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:01:58.374Z"}
