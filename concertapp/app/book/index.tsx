@@ -64,6 +64,7 @@ export default function BookConcertScreen() {
       hour12: true,
     })
     .toUpperCase();
+    
   return (
     <SafeAreaView className="flex-1 bg-black ">
       <View className="px-4 pt-3">

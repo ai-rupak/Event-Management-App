@@ -2,7 +2,7 @@ import { cancelPendingBooking, getPendingBooking } from "@/api/bookingApi";
 import { getConcert } from "@/api/concertApi";
 import { useBookingStore } from "@/stores/bookingStore";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { QueryClient, useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -18,11 +18,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TicketScreen() {
   const router = useRouter();
-  const queryClient = new QueryClient();
+  const queryClient = useQueryClient();
   const { categoryId } = useLocalSearchParams<{ categoryId?: string }>();
   const [pendingSecondsLeft, setPendingSecondsLeft] = useState(0);
   const [showModal, setShowModal] = useState(false);
-
+  
+  // Track if we've already synced the pending booking to cart
+  const hasSyncedPending = useRef(false);
+  
   const {
     data: concert,
     isLoading: concertLoading,
@@ -32,46 +35,46 @@ export default function TicketScreen() {
     queryFn: getConcert,
   });
 
-  const { data: pendingBooking, isLoading: pendingLoading } = useQuery({
+  const { 
+    data: pendingBooking, 
+    isLoading: pendingLoading,
+    isFetched: pendingFetched 
+  } = useQuery({
     queryKey: ["pendingBooking", categoryId],
     queryFn: () => getPendingBooking(categoryId as string),
     enabled: !!categoryId,
+    retry: false,
   });
-
-  const formattedDate = new Date(concert.date).toLocaleString("en-US", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-  });
-
-  const formattedTime = new Date(concert.date)
-    .toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "numeric",
-      hour12: true,
-    })
-    .toUpperCase();
 
   const categoryData = concert?.categories?.find(
     (cat: { id: string }) => cat.id == categoryId
   );
 
-
   const cancelMutation = useMutation({
-  mutationFn: () => cancelPendingBooking(categoryId as string),
-  onSuccess : () => {
-    queryClient.invalidateQueries({
-      queryKey: ["pendingBooking", categoryId]
-    });
-    setShowModal(false);
-    hasShownModal.current = false;
-    Alert.alert("Canceled", "session deleted you can start a new bookinh")
-  },
-  onError: (err: any) => {
-    Alert.alert("Error", "Failed to cancel session" + err.message)
-  }
-})
-
+    mutationFn: () => cancelPendingBooking(categoryId as string),
+    onSuccess: () => {
+      // Clear the cart
+      clearCart();
+      
+      // Invalidate queries
+      queryClient.invalidateQueries({
+        queryKey: ["pendingBooking", categoryId],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["concert"],
+      });
+      
+      // Reset state
+      setShowModal(false);
+      hasSyncedPending.current = false;
+      setPendingSecondsLeft(0);
+      
+      Alert.alert("Success", "Session deleted. You can start a new booking.");
+    },
+    onError: (err: any) => {
+      Alert.alert("Error", "Failed to cancel session: " + (err?.message || "Unknown error"));
+    },
+  });
 
   const tickets = useBookingStore((s) => s.tickets);
   const addTicket = useBookingStore((s) => s.addTicket);
@@ -84,14 +87,31 @@ export default function TicketScreen() {
   const quantity = myTicket?.quantity ?? 0;
   const totalTickets = tickets?.reduce((acc, t) => acc + t.quantity, 0);
   const totalPrice = getTotal();
-  const { name: title, price } = categoryData;
+  const { name: title, price } = categoryData || {};
 
   const isActiveSession = pendingBooking && pendingSecondsLeft > 0;
 
-  const hasShownModal = useRef(false);
+  const formattedDate = concert?.date
+    ? new Date(concert.date).toLocaleString("en-US", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+      })
+    : "";
 
+  const formattedTime = concert?.date
+    ? new Date(concert.date)
+        .toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        })
+        .toUpperCase()
+    : "";
+
+  // Timer effect - manages countdown
   useEffect(() => {
-    if (pendingBooking) {
+    if (pendingBooking?.expiresAt) {
       const now = new Date().getTime();
       let diff = Math.floor(
         (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
@@ -100,9 +120,9 @@ export default function TicketScreen() {
       console.log("Tickets: Pending diff on fetch:", diff);
 
       if (diff <= 0) {
-        console.log("Tickets: Frontend expiry on fetch, invalidate");
-        queryClient.setQueryData(["pendingBooking", categoryId], null);
+        console.log("Tickets: Session expired on client");
         setPendingSecondsLeft(0);
+        queryClient.setQueryData(["pendingBooking", categoryId], null);
         return;
       }
 
@@ -113,13 +133,14 @@ export default function TicketScreen() {
           (new Date(pendingBooking.expiresAt).getTime() - Date.now()) / 1000
         );
 
-        setPendingSecondsLeft(Math.max(0, updatedDiff));
-
         if (updatedDiff <= 0) {
           clearInterval(id);
+          setPendingSecondsLeft(0);
           queryClient.invalidateQueries({
             queryKey: ["pendingBooking", categoryId],
-          }); // Refetch to confirm null
+          });
+        } else {
+          setPendingSecondsLeft(updatedDiff);
         }
       }, 1000);
 
@@ -127,37 +148,51 @@ export default function TicketScreen() {
     } else {
       setPendingSecondsLeft(0);
     }
-  }, [pendingBooking, categoryId]);
+  }, [pendingBooking, categoryId, queryClient]);
 
+  // Sync pending booking to cart ONCE when data is available
   useEffect(() => {
-  if (pendingBooking && categoryId === pendingBooking.category.id) {
-    clearCart();
-    const { category, seats } = pendingBooking;
-    addTicket(category.id, category.name, category.price, seats);
-  }
-}, [pendingBooking, categoryId, addTicket, clearCart]);
-
-  useEffect(() => {
-  const isActiveSession = pendingBooking && pendingSecondsLeft > 0;
-  if (
-    isActiveSession &&
-    !pendingLoading &&
-    !concertLoading &&
-    !hasShownModal.current
-  ) {
-    hasShownModal.current = true;
-    setShowModal(true);
-  }
-}, [pendingBooking, pendingLoading, concertLoading, pendingSecondsLeft]);
-
-  useEffect(()=>{
-    if(showModal && pendingSecondsLeft <=0){
-      setShowModal(false);
+    if (
+      pendingBooking && 
+      pendingBooking.category.id === categoryId && 
+      !hasSyncedPending.current &&
+      pendingFetched
+    ) {
+      console.log("Syncing pending booking to cart:", pendingBooking.seats);
+      clearCart();
+      const { category, seats } = pendingBooking;
+      addTicket(category.id, category.name, category.price, seats);
+      hasSyncedPending.current = true;
+      
+      // Check if timer is still valid
+      const now = new Date().getTime();
+      const diff = Math.floor(
+        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
+      );
+      
+      // Only show modal if session is still valid
+      if (diff > 0) {
+        setShowModal(true);
+      }
     }
-  },[pendingSecondsLeft, showModal]);
+  }, [pendingBooking, categoryId, addTicket, clearCart, pendingFetched]);
+
+  // Auto-hide modal when timer expires
+  useEffect(() => {
+    if (showModal && pendingSecondsLeft <= 0) {
+      setShowModal(false);
+      hasSyncedPending.current = false;
+    }
+  }, [pendingSecondsLeft, showModal]);
 
   const handleAdd = () => {
-    if (isActiveSession) return;
+    if (isActiveSession) {
+      Alert.alert(
+        "Session Active", 
+        "You cannot modify tickets while a booking session is active. Please complete or cancel your current booking."
+      );
+      return;
+    }
     if (!myTicket) {
       addTicket(categoryId as string, title, price, 1);
     } else {
@@ -165,38 +200,14 @@ export default function TicketScreen() {
     }
   };
 
-    if (!categoryData) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <Text className="text-white">Category not found</Text>
-        <Pressable onPress={() => router.back()}>
-          <Text className="text-white">Go Back</Text>
-        </Pressable>
-      </SafeAreaView>
-    );
-  }
-
-  if (pendingLoading) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <ActivityIndicator size={"large"} color={"#fff"} />
-        <Text className="text-white mt-2">Checking Session...</Text>
-      </SafeAreaView>
-    );
-  }
-
-  if (concertLoading) {
-    return (
-      <SafeAreaView className="flex-1 bg-black justify-center items-center">
-        <ActivityIndicator size={"large"} color={"#fff"} />
-        <Text className="text-white mt-2">Loading Concert ...</Text>
-      </SafeAreaView>
-    );
-  }
-
-
   const handleRemove = () => {
-    if (isActiveSession) return;
+    if (isActiveSession) {
+      Alert.alert(
+        "Session Active", 
+        "You cannot modify tickets while a booking session is active. Please complete or cancel your current booking."
+      );
+      return;
+    }
     if (!myTicket) return;
     const newQty = myTicket.quantity - 1;
     if (newQty <= 0) {
@@ -208,37 +219,52 @@ export default function TicketScreen() {
 
   const handleContinue = () => {
     if (isActiveSession) {
-      queryClient.invalidateQueries({
-        queryKey: ["pendingBooking", categoryId],
-      });
-      router.replace("/book/review");
-    }
-    if (totalTickets == 0) {
-      Alert.alert("No Tickets", "Please add at least one ticket");
+      // Close modal and navigate
+      setShowModal(false);
+      router.push("/book/review");
       return;
     }
+    
+    if (totalTickets === 0) {
+      Alert.alert("No Tickets", "Please add at least one ticket to continue.");
+      return;
+    }
+    
     router.push("/book/review");
   };
 
-  console.log("Tickets:",pendingBooking);
-  const pendingMm = String(Math.floor(pendingSecondsLeft / 60)).padStart(2, '0');
-  const pendingSs = String(pendingSecondsLeft % 60).padStart(2, '0');
+  // Loading states
+  if (concertLoading || (pendingLoading && !pendingFetched)) {
+    return (
+      <SafeAreaView className="flex-1 bg-black justify-center items-center">
+        <ActivityIndicator size={"large"} color={"#fff"} />
+        <Text className="text-white mt-2">
+          {concertLoading ? "Loading Concert..." : "Checking Session..."}
+        </Text>
+      </SafeAreaView>
+    );
+  }
 
-  if (concertError || !concert || !categoryId) {
-  return (
-    <SafeAreaView className="flex-1 bg-black justify-center items-center">
-      <Text className="text-red-500">
-        Error loading data: {concertError?.message || "No category"}
-      </Text>
-      <Pressable
-        onPress={() => router.back()}
-        className="mt-4 p-3 bg-gray-700 rounded"
-      >
-        <Text className="text-white">Go Back</Text>
-      </Pressable>
-    </SafeAreaView>
-  );
-}
+  // Error states
+  if (concertError || !concert || !categoryId || !categoryData) {
+    return (
+      <SafeAreaView className="flex-1 bg-black justify-center items-center">
+        <Text className="text-red-500 text-center px-4 mb-4">
+          {concertError?.message || "Category not found"}
+        </Text>
+        <Pressable
+          onPress={() => router.back()}
+          className="px-6 py-3 bg-gray-700 rounded-lg"
+        >
+          <Text className="text-white font-semibold">Go Back</Text>
+        </Pressable>
+      </SafeAreaView>
+    );
+  }
+
+  const pendingMm = String(Math.floor(pendingSecondsLeft / 60)).padStart(2, "0");
+  const pendingSs = String(pendingSecondsLeft % 60).padStart(2, "0");
+
   return (
     <SafeAreaView className="flex-1 bg-black">
       <View className="px-4 pt-3 pb-2">
@@ -255,8 +281,8 @@ export default function TicketScreen() {
             <Text className="text-white text-lg font-semibold">
               {concert?.name}
             </Text>
-            <Text className="text-gray-400 text-sm mt-1">
-              {formattedDate} | {formattedTime} onwards | {concert?.venue}
+            <Text className="text-gray-400 text-sm mt-1 numberOfLines={1}">
+              {formattedDate} | {formattedTime} | {concert?.venue?.split(",")[0]}
             </Text>
           </View>
         </View>
@@ -273,28 +299,38 @@ export default function TicketScreen() {
         <View className="bg-[#111] border border-gray-800 rounded-2xl px-4 py-5 mb-4">
           <View className="flex-row items-center justify-between mb-2">
             <Text className="text-white font-semibold text-base">
-              {title.toUpperCase()}
+              {title?.toUpperCase()}
             </Text>
 
-            {quantity == 0 ? (
+            {quantity === 0 ? (
               <Pressable
                 onPress={handleAdd}
-                className={`w-28 py-2 border rounded-lg items-center justify-center ${isActiveSession ? "border-red-500 bg-red-100" : "border-gray-300 bg-gray-800"}`}
+                disabled={isActiveSession}
+                className={`w-28 py-2 border rounded-lg items-center justify-center ${
+                  isActiveSession
+                    ? "border-red-500 bg-red-900/30"
+                    : "border-gray-300 bg-gray-800"
+                }`}
               >
                 <Text
-                  className={`font-medium ${isActiveSession ? "text-red-600" : "text-white"}`}
+                  className={`font-medium text-sm ${
+                    isActiveSession ? "text-red-400" : "text-white"
+                  }`}
                 >
-                  {isActiveSession ? "Session Active" : "Add Ticket"}
+                  {isActiveSession ? "Locked" : "Add Ticket"}
                 </Text>
               </Pressable>
             ) : (
               <View className="w-28 py-2 rounded-lg bg-white flex-row items-center justify-between px-3">
                 <Pressable
                   onPress={handleRemove}
-                  className={`p-1 rounded ${isActiveSession ? "opacity-50" : ""}`}
+                  disabled={isActiveSession}
+                  className={`p-1 rounded ${isActiveSession ? "opacity-30" : ""}`}
                 >
                   <Text
-                    className={`text-lg font-bold ${isActiveSession ? "text-gray-400" : "text-black"}`}
+                    className={`text-lg font-bold ${
+                      isActiveSession ? "text-gray-400" : "text-black"
+                    }`}
                   >
                     -
                   </Text>
@@ -305,11 +341,14 @@ export default function TicketScreen() {
                 </Text>
 
                 <Pressable
-                  className={`p-1 rounded ${isActiveSession ? "opacity-50" : ""}`}
                   onPress={handleAdd}
+                  disabled={isActiveSession}
+                  className={`p-1 rounded ${isActiveSession ? "opacity-30" : ""}`}
                 >
                   <Text
-                    className={`text-lg font-bold ${isActiveSession ? "text-gray-400" : "text-black"}`}
+                    className={`text-lg font-bold ${
+                      isActiveSession ? "text-gray-400" : "text-black"
+                    }`}
                   >
                     +
                   </Text>
@@ -318,7 +357,7 @@ export default function TicketScreen() {
             )}
           </View>
           <Text className="text-gray-300 text-base mb-3">
-            ₹ {price.toLocaleString()} each
+            ₹ {price?.toLocaleString()} each
           </Text>
 
           <View className="space-y-1 mt-2">
@@ -329,14 +368,29 @@ export default function TicketScreen() {
               • This is a standing section.
             </Text>
             <Text className="text-gray-400 text-sm mt-1">
-              • Seats will be allocated on a first-come , first-serve basis.
+              • Seats will be allocated on a first-come, first-serve basis.
             </Text>
           </View>
         </View>
+
+        {isActiveSession && (
+          <View className="bg-orange-900/20 border border-orange-500/50 rounded-xl px-4 py-3 mb-4">
+            <View className="flex-row items-center">
+              <Ionicons name="time-outline" size={20} color="#fb923c" />
+              <Text className="text-orange-400 font-semibold ml-2">
+                Session Active: {pendingMm}:{pendingSs}
+              </Text>
+            </View>
+            <Text className="text-orange-300/80 text-sm mt-2">
+              Your tickets are reserved. Complete payment before time runs out.
+            </Text>
+          </View>
+        )}
+
         <View className="bg-[#111] border border-gray-800 rounded-2xl px-4 py-4 mb-4">
           <Text className="text-white font-semibold mb-2">Order Summary</Text>
           <Text className="text-gray-400 text-sm">
-            {totalTickets} ticket{totalTickets !== 1 ? "s" : ""} • ₹ {""}
+            {totalTickets} ticket{totalTickets !== 1 ? "s" : ""} • ₹{" "}
             {totalPrice.toLocaleString()}
           </Text>
         </View>
@@ -348,29 +402,28 @@ export default function TicketScreen() {
             {totalTickets} ticket{totalTickets !== 1 ? "s" : ""}{" "}
           </Text>
           <Text className="text-white text-lg font-semibold">
-            ₹ {""}
-            {totalPrice.toLocaleString()}
+            ₹ {totalPrice.toLocaleString()}
           </Text>
         </View>
 
         <Pressable
           onPress={handleContinue}
-          disabled={(totalTickets === 0 && !isActiveSession) || pendingLoading}
+          disabled={totalTickets === 0 && !isActiveSession}
           className={`px-6 py-3 rounded-full ${
-            (totalTickets === 0 && !isActiveSession) || pendingLoading
+            totalTickets === 0 && !isActiveSession
               ? "bg-gray-700"
               : "bg-white"
           }`}
         >
           <Text
             className={`font-semibold ${
-              (totalTickets === 0 && !isActiveSession) || pendingLoading
-                ? "text-gray-300"
+              totalTickets === 0 && !isActiveSession
+                ? "text-gray-400"
                 : "text-black"
             }`}
           >
             {isActiveSession
-              ? "Continue Session"
+              ? "Continue Payment"
               : totalTickets > 0
                 ? "Continue"
                 : "Select Tickets"}
@@ -378,41 +431,60 @@ export default function TicketScreen() {
         </Pressable>
       </View>
 
-      <Modal visible={showModal} transparent={true} animationType="fade">
-        <Pressable className="flex-1 justify-center items-center bg-black/50">
-          <View className="bg-white rounded-2xl p-6 w-4/5">
-            <Text className="text-black text-lg font-bold mb-2">
-              Active Session Detected
-            </Text>
-            <Text className="text-black mb-4">
-              You have an active booking for {pendingBooking?.seats} x{" "}
-              {pendingBooking?.category.name} tickets ({pendingMm}:{pendingSs}{" "}
-              left).
-              <Text className="font-semibold">
-                {" "}
-                Complete payment to secure them.
+      <Modal 
+        visible={showModal} 
+        transparent={true} 
+        animationType="fade"
+        onRequestClose={() => {}}
+      >
+        <View className="flex-1 justify-center items-center bg-black/70">
+          <View className="bg-white rounded-2xl p-6 w-[85%] max-w-md">
+            <View className="flex-row items-center mb-3">
+              <Ionicons name="alert-circle" size={28} color="#3b82f6" />
+              <Text className="text-black text-xl font-bold ml-3">
+                Active Session
               </Text>
+            </View>
+            
+            <Text className="text-gray-700 mb-2 leading-6">
+              You have an ongoing booking for:
+            </Text>
+            
+            <View className="bg-blue-50 rounded-lg p-3 mb-4">
+              <Text className="text-blue-900 font-semibold">
+                {pendingBooking?.seats}x {pendingBooking?.category.name} tickets
+              </Text>
+              <Text className="text-blue-700 text-sm mt-1">
+                Time remaining: {pendingMm}:{pendingSs}
+              </Text>
+            </View>
+            
+            <Text className="text-gray-600 text-sm mb-5">
+              Complete payment now to secure your tickets, or delete this session to start over.
             </Text>
 
-            <View className="flex-row justify-between gap-2">
-                <Pressable
+            <View className="flex-row gap-3">
+              <Pressable
                 disabled={cancelMutation.isPending}
-                onPress={()=>{
-                  setShowModal(false);
-                  cancelMutation.mutate();
-                }}
-                className="flex-1 bg-red-100 px-4 py-3 rounded-lg items-center">
-                  <Text className="text-red-600 font-semibold">{cancelMutation?.isPending ? "Deleting" : "Delete Session"}</Text>
-                </Pressable>
+                onPress={() => cancelMutation.mutate()}
+                className={`flex-1 ${cancelMutation.isPending ? 'bg-gray-200' : 'bg-red-50'} px-4 py-3 rounded-xl border border-red-200`}
+              >
+                <Text className="text-red-600 font-semibold text-center">
+                  {cancelMutation.isPending ? "Deleting..." : "Delete Session"}
+                </Text>
+              </Pressable>
 
-                <Pressable
+              <Pressable
                 onPress={handleContinue}
-                className="flex-1 bg-blue-500 px-4 py-3 rounded-lg items-center">
-                  <Text className="text-white font-semibold">Continue Booking</Text>
-                </Pressable>
+                className="flex-1 bg-blue-500 px-4 py-3 rounded-xl"
+              >
+                <Text className="text-white font-semibold text-center">
+                  Continue
+                </Text>
+              </Pressable>
             </View>
           </View>
-        </Pressable>
+        </View>
       </Modal>
     </SafeAreaView>
   );

@@ -2872,3 +2872,250 @@
 {"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-05T09:43:58.168Z"}
 {"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-05T09:44:58.174Z"}
 {"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-05T09:45:58.190Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-07T06:56:04.616Z"}
+{"count":0,"duration":985,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T06:57:05.594Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T06:58:04.666Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T06:59:04.676Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:00:04.686Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:01:04.700Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:02:04.703Z"}
+{"count":0,"duration":87,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:03:04.742Z"}
+{"count":0,"duration":80,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:04:04.742Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:05:04.731Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:06:04.742Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:07:04.745Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:08:04.752Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:09:04.767Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:10:04.764Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:11:04.773Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:12:04.780Z"}
+{"count":0,"duration":69,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:13:04.806Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:14:04.802Z"}
+{"count":0,"duration":74,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:15:04.823Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:16:04.809Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:17:04.822Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:18:04.831Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-07T07:18:09.467Z"}
+{"bookingId":"695e08c02d55192d5fdd91b5","expiresAt":"2026-01-07T07:28:24.756Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T07:18:25.238Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T07:18:49.426Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T07:19:00.657Z"}
+{"bookingId":"695e08c02d55192d5fdd91b5","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T07:19:00.658Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:19:04.848Z"}
+{"bookingId":"695e091c2d55192d5fdd91b6","expiresAt":"2026-01-07T07:29:56.673Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T07:19:57.097Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T07:19:59.411Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:20:04.842Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T07:20:49.871Z"}
+{"bookingId":"695e091c2d55192d5fdd91b6","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T07:20:49.872Z"}
+{"bookingId":"695e095a2d55192d5fdd91b7","expiresAt":"2026-01-07T07:30:58.614Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T07:20:59.099Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T07:21:01.159Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:21:04.849Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T07:21:24.221Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T07:21:40.506Z"}
+{"bookingId":"695e095a2d55192d5fdd91b7","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T07:21:40.507Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:22:04.857Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:23:04.859Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:24:04.869Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:25:04.881Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:26:04.887Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:27:04.884Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:28:04.904Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:29:04.915Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:30:04.928Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:31:04.927Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:32:04.936Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:33:04.945Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:34:04.948Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:35:04.954Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:36:04.964Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:37:04.979Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:38:04.986Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:39:05.004Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:40:05.006Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:41:05.011Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:42:05.023Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:43:05.028Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:44:05.034Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:45:05.036Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:46:05.050Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:47:05.069Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:48:05.068Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:49:05.082Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:50:05.096Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:51:05.098Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:52:05.092Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:53:05.094Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:54:05.112Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:55:05.117Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:56:05.122Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:57:05.140Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:58:05.139Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T07:59:05.144Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:00:05.154Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:01:05.163Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:02:05.164Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:03:05.179Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:04:05.182Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:05:05.198Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:06:05.209Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:07:05.217Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:08:05.219Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:09:05.224Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:10:05.231Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:11:05.251Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:12:05.245Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:13:05.248Z"}
+{"count":0,"duration":1024,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:16:57.561Z"}
+{"count":0,"duration":93,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:17:56.632Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:18:56.601Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:19:56.612Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:20:56.630Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:21:56.632Z"}
+{"count":0,"duration":131,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:22:56.723Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:23:56.662Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:24:56.679Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:25:56.697Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:26:56.687Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:27:56.692Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:28:56.699Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:29:56.713Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:30:56.714Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:31:56.719Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:32:56.719Z"}
+{"count":0,"duration":1766,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:51:53.633Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:52:51.927Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:53:51.942Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:54:51.946Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:55:51.952Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:56:51.962Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:57:51.974Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:58:51.975Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T08:59:51.987Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:00:52.001Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:01:52.011Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:02:52.032Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:03:52.027Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:04:52.028Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:05:52.042Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:06:52.044Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:07:52.059Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:08:52.059Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:09:52.075Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:10:52.079Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:11:52.084Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:12:52.091Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:13:52.097Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:14:52.111Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:15:52.115Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:16:52.126Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:17:52.127Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:18:52.132Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:19:52.144Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:20:52.156Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:21:52.162Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:22:52.163Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:23:52.167Z"}
+{"count":0,"duration":127,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:24:52.250Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:25:52.182Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:26:52.196Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:27:52.208Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:28:52.217Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:29:52.226Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:30:52.226Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:31:52.238Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:32:52.252Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:33:52.250Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:34:52.263Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:35:52.266Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:36:52.267Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:37:52.284Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:38:52.293Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:39:52.310Z"}
+{"count":0,"duration":103,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:40:52.362Z"}
+{"count":0,"duration":87,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:41:52.357Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:42:52.330Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:43:52.336Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:44:52.344Z"}
+{"count":0,"duration":87,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:45:52.390Z"}
+{"count":0,"duration":239,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:46:52.555Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:47:52.381Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:48:52.388Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:49:52.388Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:50:52.397Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:51:52.396Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:52:52.405Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:53:52.408Z"}
+{"count":0,"duration":111,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:54:52.470Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:55:52.414Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:56:52.425Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:57:52.425Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T09:58:52.443Z"}
+{"count":0,"duration":1275,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:08:06.422Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:09:05.208Z"}
+{"count":0,"duration":1000,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:11:58.897Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:12:57.954Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:13:57.965Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:14:57.975Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:15:57.974Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:16:57.992Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:17:57.989Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:18:57.996Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:19:58.001Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:20:58.007Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:21:58.016Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:22:58.023Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:23:58.039Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:24:58.047Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:25:58.048Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:26:58.051Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:27:58.057Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:28:58.069Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:29:58.079Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:30:58.092Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:31:58.101Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:32:58.112Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:33:58.133Z"}
+{"bookingId":"695e36c62d55192d5fdd91b8","expiresAt":"2026-01-07T10:44:46.944Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:34:48.436Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:34:58.130Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:35:04.331Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:35:06.898Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:35:10.963Z"}
+{"categoryId":"695384d62b08ef6fa8441500","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:35:12.695Z"}
+{"bookingId":"695e36ef2d55192d5fdd91b9","expiresAt":"2026-01-07T10:45:27.447Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:35:27.943Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:35:58.149Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:07.852Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:10.494Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:12.683Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:15.199Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:17.037Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:36:18.723Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:36:58.147Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:37:07.551Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T10:37:28.042Z"}
+{"bookingId":"695e36ef2d55192d5fdd91b9","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T10:37:28.044Z"}
+{"bookingId":"695e376f2d55192d5fdd91ba","expiresAt":"2026-01-07T10:47:35.843Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:37:36.274Z"}
+{"categoryId":"695384d62b08ef6fa8441502","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-07T10:37:44.349Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T10:37:50.947Z"}
+{"bookingId":"695e376f2d55192d5fdd91ba","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T10:37:50.948Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:37:58.158Z"}
+{"bookingId":"695e37862d55192d5fdd91bb","expiresAt":"2026-01-07T10:47:58.663Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:37:59.097Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:38:58.173Z"}
+{"count":0,"duration":345,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:39:58.478Z"}
+{"count":0,"duration":88,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:40:58.235Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:41:58.205Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:42:58.216Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:43:58.224Z"}
+{"count":1,"duration":645,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:44:58.816Z"}
+{"bookingId":"695e394a2d55192d5fdd91bc","expiresAt":"2026-01-07T10:55:30.211Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:45:30.633Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T10:45:39.888Z"}
+{"bookingId":"695e394a2d55192d5fdd91bc","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T10:45:39.889Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:45:58.236Z"}
+{"bookingId":"695e39682d55192d5fdd91bd","expiresAt":"2026-01-07T10:56:00.169Z","level":"info","message":"Booking Created","timestamp":"2026-01-07T10:46:00.597Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T10:46:16.476Z"}
+{"bookingId":"695e39682d55192d5fdd91bd","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T10:46:16.477Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:46:58.241Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:47:58.247Z"}
+{"count":1,"duration":634,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:48:58.838Z"}
+{"count":0,"duration":68,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:49:58.287Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:50:58.280Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:51:58.283Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T10:52:58.296Z"}
