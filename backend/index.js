@@ -9,6 +9,8 @@ const logger = require("./config/logger.js");
 const app = express();
 const dotenv = require('dotenv');
 const { cleanExpiredBookings } = require("./services/bookingService.js");
+const { promoteUsers,cleanExpiredSlots } = require("./services/queueService.js");
+const { SINGLE_CONCERT_ID } = require("./config/constants.js");
 dotenv.config();
 
 app.use(helmet());           // Adds security headers
@@ -23,7 +25,23 @@ app.use("/api", routes);
 
 
 setInterval(cleanExpiredBookings, 60*1000); // Clean expired bookings every 60 seconds
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  logger.info(`Server is running on port ${PORT}`);
+
+setInterval(() => {
+  promoteUsers(SINGLE_CONCERT_ID);
+}, 5000);
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   logger.info(`Server is running on port ${PORT}`);
+// });
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+
+  // Queue worker (DEV / SINGLE INSTANCE)
+  setInterval( async() => {
+    await promoteUsers(SINGLE_CONCERT_ID);
+    await cleanExpiredSlots(SINGLE_CONCERT_ID)
+      .catch(err => console.error("Queue worker error", err));
+  }, 5000);
 });

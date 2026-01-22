@@ -107,7 +107,7 @@ const login = async (data) => {
     data: { refreshToken: hashedRefreshToken },
   });
 
-  return { accessToken, refreshToken };
+  return { accessToken, refreshToken ,user};
 };
 
 const refresh = async (refreshToken) => {

@@ -11,6 +11,7 @@ import { QueryProvider } from '@/providers/QueryProvider';
 import { loadTokens, useAuthStore } from '@/stores/authStore';
 import { View } from '@/components/Themed';
 import { ActivityIndicator } from 'react-native';
+import StripeWrapper from '@/providers/StripeWrapper';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -84,8 +85,12 @@ function RootLayoutNav() {
     );
   }
 
+
+
+
   return (
     <QueryProvider>
+    <StripeWrapper>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" />
@@ -94,6 +99,7 @@ function RootLayoutNav() {
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
         </Stack>
       </ThemeProvider>
+     </StripeWrapper>
     </QueryProvider>
   );
 }

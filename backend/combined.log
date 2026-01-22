@@ -3132,3 +3132,1026 @@
 {"bookingId":"695e3ce92d55192d5fdd91be","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T11:01:05.884Z"}
 {"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:01:58.374Z"}
 {"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:02:58.392Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:03:58.400Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-07T11:16:50.772Z"}
+{"count":0,"duration":880,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:17:51.646Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:18:50.828Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:19:50.836Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-07T11:19:52.326Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-07T11:19:53.242Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:20:50.855Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:21:50.856Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-07T11:22:17.823Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-07T11:22:18.371Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:22:50.861Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-07T11:22:52.730Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-07T11:22:52.963Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-07T11:22:55.883Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-07T11:22:56.147Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-07T11:22:57.104Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-07T11:22:57.335Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:23:50.863Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:24:50.872Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:25:50.877Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:26:50.887Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:27:50.900Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:28:50.905Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:29:50.919Z"}
+{"count":0,"duration":125,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:30:50.994Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T05:44:48.176Z"}
+{"count":0,"duration":979,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:45:49.149Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:46:48.231Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:47:48.232Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:48:48.248Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:49:48.257Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:50:48.272Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-08T05:50:52.318Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T05:50:53.258Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:51:48.268Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:52:48.281Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:53:48.282Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:54:48.293Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:55:48.305Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-08T05:56:46.771Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T05:56:47.060Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:56:48.312Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:57:48.325Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:58:48.339Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T05:59:48.341Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:00:48.352Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:01:48.358Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:02:21.307Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:02:23.644Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:02:24.486Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:02:49.952Z"}
+{"level":"info","message":"Email sent to bwubta22007@brainwareuniversity.ac.in with subject: Your OTP for Verification","timestamp":"2026-01-08T06:02:53.027Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"SignUp Success","timestamp":"2026-01-08T06:02:53.028Z"}
+{"count":0,"duration":651,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:03:21.964Z"}
+{"level":"info","message":"Email sent to bwubta22007@brainwareuniversity.ac.in with subject: Welcome to Our Service","timestamp":"2026-01-08T06:03:29.738Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"OTP Verification Success","timestamp":"2026-01-08T06:03:29.740Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:04:21.371Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:04:48.815Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:04:49.344Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:05:21.381Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:06:21.388Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:06:35.167Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:06:35.434Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:06:41.892Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:06:42.157Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:06:45.323Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:06:45.575Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:06:46.435Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:06:46.701Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:06:47.157Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:06:47.428Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:07:21.396Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:07:39.371Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:07:47.133Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:07:47.990Z"}
+{"count":0,"duration":578,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:08:39.953Z"}
+{"count":0,"duration":99,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:09:39.490Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:10:51.706Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:10:54.900Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:10:56.030Z"}
+{"count":0,"duration":697,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:11:52.409Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:12:51.775Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:13:51.791Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:14:32.043Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:14:34.890Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Your OTP for Verification","timestamp":"2026-01-08T06:14:38.596Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"SignUp Success","timestamp":"2026-01-08T06:14:38.596Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Welcome to Our Service","timestamp":"2026-01-08T06:15:07.980Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"OTP Verification Success","timestamp":"2026-01-08T06:15:07.983Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-08T06:15:22.635Z"}
+{"error":"\nInvalid `prisma.user.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\authService.js:37:34\n\n  34 }\n  35 const hashedPassword = await hashPassword(password);\n  36 \n→ 37 const user = await prisma.user.create(\nUnique constraint failed on the constraint: `User_googleId_key`","level":"error","message":"SignUp Failed","timestamp":"2026-01-08T06:15:22.972Z"}
+{"count":0,"duration":624,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:15:32.662Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:16:32.095Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T06:16:46.336Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:17:32.105Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:18:32.114Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:19:32.123Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:20:32.134Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:21:32.152Z"}
+{"error":"Invalid email or password","level":"error","message":"Login Email Failed","timestamp":"2026-01-08T06:21:49.669Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T06:22:04.541Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T06:22:20.030Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:22:32.156Z"}
+{"error":"Invalid email or password","level":"error","message":"Login Email Failed","timestamp":"2026-01-08T06:22:56.666Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:23:32.173Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:24:32.192Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T06:25:20.157Z"}
+{"bookingId":"695f4ddb166b7fd62714da02","expiresAt":"2026-01-08T06:35:31.286Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T06:25:31.717Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:25:32.202Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T06:26:14.999Z"}
+{"bookingId":"695f4ddb166b7fd62714da02","level":"info","message":"Booking Confirmed","timestamp":"2026-01-08T06:26:15.000Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:26:32.221Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:27:32.218Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:28:32.242Z"}
+{"count":0,"duration":72,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:29:32.260Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:30:32.252Z"}
+{"count":0,"duration":78,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:31:32.280Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:32:32.259Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:33:32.259Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:34:32.263Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:35:32.269Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:36:32.279Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:37:32.281Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:38:32.277Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:38:38.539Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:38:55.862Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:38:59.343Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:39:24.810Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:39:42.333Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:39:50.193Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:40:17.962Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:41:00.880Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:41:15.526Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:41:17.314Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:41:29.144Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:41:42.093Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:42:17.879Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:42:28.788Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:42:32.049Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:42:35.637Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:42:36.989Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:08.880Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:10.304Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:24.949Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:36.650Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:39.102Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:43:39.940Z"}
+{"count":0,"duration":838,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:44:40.785Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:45:39.999Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:46:40.015Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:47:40.024Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:48:40.027Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:49:40.031Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:50:13.130Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T06:50:28.892Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T06:51:09.636Z"}
+{"count":0,"duration":145,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:51:13.284Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:52:13.199Z"}
+{"count":0,"duration":80,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:53:13.226Z"}
+{"count":0,"duration":74,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:54:13.223Z"}
+{"count":0,"duration":132,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:55:13.290Z"}
+{"count":0,"duration":180,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T06:56:13.350Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:56:17.627Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:56:50.999Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:56:57.950Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:04.791Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:06.305Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:16.353Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:27.387Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:37.902Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T06:57:42.935Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:02:12.847Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:02:58.105Z"}
+{"count":0,"duration":789,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:03:58.894Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:04:29.879Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:04:58.158Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:05:58.164Z"}
+{"error":"[\n  {\n    \"expected\": \"object\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected object, received undefined\"\n  }\n]","level":"error","message":"validation error","timestamp":"2026-01-08T07:06:09.799Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:06:58.167Z"}
+{"error":"[\n  {\n    \"expected\": \"object\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected object, received undefined\"\n  }\n]","level":"error","message":"validation error","timestamp":"2026-01-08T07:07:03.196Z"}
+{"error":"[\n  {\n    \"expected\": \"object\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected object, received undefined\"\n  }\n]","level":"error","message":"validation error","timestamp":"2026-01-08T07:07:31.495Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:07:37.881Z"}
+{"error":"[\n  {\n    \"expected\": \"object\",\n    \"code\": \"invalid_type\",\n    \"path\": [],\n    \"message\": \"Invalid input: expected object, received undefined\"\n  }\n]","level":"error","message":"validation error","timestamp":"2026-01-08T07:07:54.352Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:07:58.177Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:08:03.931Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:08:58.189Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:09:58.196Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:10:58.207Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:11:19.649Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:11:26.120Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:11:29.117Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:11:46.543Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:11:51.229Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:11:53.080Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:11:56.639Z"}
+{"count":0,"duration":738,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:12:53.815Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:13:53.147Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:14:53.150Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:15:53.153Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:16:53.156Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:17:53.159Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:18:11.385Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:18:53.169Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:19:53.180Z"}
+{"count":0,"duration":109,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:20:53.251Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:21:53.202Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:22:28.865Z"}
+{"count":0,"duration":739,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:23:29.597Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:24:28.905Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:25:28.918Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:26:28.935Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:27:28.937Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:28:28.935Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:29:18.195Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:29:30.061Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:29:36.019Z"}
+{"count":0,"duration":755,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:30:36.778Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:31:09.863Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:31:35.986Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:31:37.904Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:31:42.994Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:32:04.112Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:32:07.438Z"}
+{"count":0,"duration":790,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:33:08.222Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:33:35.478Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:34:07.504Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:35:07.504Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:35:20.560Z"}
+{"count":0,"duration":1291,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:36:21.851Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:37:20.634Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:38:20.641Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:39:09.600Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:39:12.512Z"}
+{"err":{"body":"{\r\n  \"userId\": \"695f4b4b166b7fd62714d9fd\",\r\n\n}","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T07:39:20.037Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-08T07:39:32.176Z"}
+{"count":0,"duration":1044,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:40:13.559Z"}
+{"count":0,"duration":98,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:41:12.614Z"}
+{"count":0,"duration":97,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:42:12.617Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T07:43:05.390Z"}
+{"count":0,"duration":103,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:43:12.626Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:44:12.592Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:45:12.598Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:46:12.603Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-01-08T07:47:12.678Z"}
+{"bookingId":"695f611bd939e745301e4c8f","expiresAt":"2026-01-08T07:57:39.224Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T07:47:39.695Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T07:47:56.137Z"}
+{"bookingId":"695f611bd939e745301e4c8f","level":"info","message":"Booking Confirmed","timestamp":"2026-01-08T07:47:56.138Z"}
+{"bookingId":"695f6139d939e745301e4c90","expiresAt":"2026-01-08T07:58:09.118Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T07:48:09.598Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:48:16.425Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T07:50:06.991Z"}
+{"bookingId":"695f6139d939e745301e4c90","level":"info","message":"Booking Confirmed","timestamp":"2026-01-08T07:50:06.994Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T07:50:15.842Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:50:55.863Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:51:55.878Z"}
+{"count":0,"duration":84,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:52:55.901Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:53:55.882Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:54:55.889Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:55:55.897Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:56:55.901Z"}
+{"count":0,"duration":276,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:57:56.132Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:58:55.918Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T07:59:55.925Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:00:55.936Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:01:55.939Z"}
+{"count":0,"duration":74,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:02:55.979Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:03:55.962Z"}
+{"count":0,"duration":77,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:04:56.000Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:05:55.977Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:06:55.984Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:07:55.996Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:08:55.996Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:09:56.007Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:10:56.025Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:11:56.022Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:12:56.022Z"}
+{"count":0,"duration":3591,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:43:14.615Z"}
+{"count":0,"duration":67,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:44:11.104Z"}
+{"count":0,"duration":69,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:45:11.117Z"}
+{"count":0,"duration":66,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:46:11.124Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:47:11.110Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:48:11.122Z"}
+{"count":0,"duration":132,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:49:11.216Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:50:11.144Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:51:11.153Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:52:11.164Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:53:11.170Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:54:11.181Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:55:11.179Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:56:11.186Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:57:11.192Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T08:58:11.207Z"}
+{"count":0,"duration":1427,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:00:27.158Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:01:25.810Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:02:25.811Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:03:25.821Z"}
+{"count":0,"duration":787,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:04:56.888Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:05:56.151Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:06:56.154Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:07:56.166Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:08:56.176Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:09:56.190Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:10:56.199Z"}
+{"count":0,"duration":820,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:12:31.997Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:13:31.234Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:14:31.242Z"}
+{"count":0,"duration":591,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:19:41.931Z"}
+{"count":0,"duration":971,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:21:42.587Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:22:41.685Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:23:41.691Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:24:41.696Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:25:41.696Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:26:41.704Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T09:26:47.995Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:26:58.442Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:27:41.710Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:28:08.062Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:28:41.724Z"}
+{"count":0,"duration":66,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:29:41.745Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:30:03.654Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:30:17.430Z"}
+{"count":0,"duration":125,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:30:41.813Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:30:42.616Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:30:45.650Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T09:30:52.367Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:31:41.748Z"}
+{"count":0,"duration":77,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:32:41.783Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:33:41.768Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:34:41.773Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:35:41.783Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:36:41.792Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:37:41.801Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:38:41.813Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:39:41.824Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:40:41.833Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:41:41.831Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:42:41.845Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:43:41.861Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:44:41.870Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:45:41.867Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:46:41.884Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:47:41.879Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:48:41.890Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:49:41.897Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:50:41.916Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:51:41.912Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:52:41.914Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:53:41.922Z"}
+{"count":0,"duration":85,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:54:41.968Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:55:41.945Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:57:32.211Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T09:58:25.576Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T09:58:27.688Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T09:58:32.219Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T09:58:36.099Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:00:17.959Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:01:17.965Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:02:17.963Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:03:06.099Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:03:17.965Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:04:17.978Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:05:17.979Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:06:17.976Z"}
+{"count":0,"duration":757,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:08:03.386Z"}
+{"count":0,"duration":722,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:10:00.164Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:10:59.506Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:13:02.317Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:13:24.020Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:14:24.021Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:15:24.032Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:16:45.875Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:16:47.113Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:17:05.521Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:17:06.517Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:17:14.348Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:17:35.080Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T10:17:36.486Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:18:34.624Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:19:34.633Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:20:34.630Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:21:34.641Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:22:34.647Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:23:34.661Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:24:34.659Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:25:34.665Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:26:34.664Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:27:34.683Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:27:53.995Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:28:34.681Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:29:34.697Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:29:34.936Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:30:16.249Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:30:25.731Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:31:12.182Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:31:53.263Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:32:12.196Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:33:12.205Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:34:12.202Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:35:12.198Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:36:12.206Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:37:12.206Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:38:12.220Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:39:12.218Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:40:12.229Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:41:12.237Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:42:12.241Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:43:12.254Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:44:12.264Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:45:12.281Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:45:34.542Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:46:12.285Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:47:12.294Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:48:12.293Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:48:25.926Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:48:30.533Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:48:54.697Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:49:12.293Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:50:12.295Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:50:29.744Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:51:12.297Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:52:12.305Z"}
+{"count":0,"duration":888,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:53:18.730Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: undefined,\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         expiresAt: new Date(\"2026-01-08T11:03:24.966Z\"),\n     +   user: {\n     +     create: UserCreateWithoutBookingsInput | UserUncheckedCreateWithoutBookingsInput,\n     +     connectOrCreate: UserCreateOrConnectWithoutBookingsInput,\n     +     connect: UserWhereUniqueInput\n     +   }\n       }\n     })\n\nArgument `user` is missing.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:53:25.034Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: undefined,\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         expiresAt: new Date(\"2026-01-08T11:03:57.650Z\"),\n     +   user: {\n     +     create: UserCreateWithoutBookingsInput | UserUncheckedCreateWithoutBookingsInput,\n     +     connectOrCreate: UserCreateOrConnectWithoutBookingsInput,\n     +     connect: UserWhereUniqueInput\n     +   }\n       }\n     })\n\nArgument `user` is missing.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:53:57.696Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:54:17.890Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: undefined,\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         expiresAt: new Date(\"2026-01-08T11:04:44.227Z\"),\n     +   user: {\n     +     create: UserCreateWithoutBookingsInput | UserUncheckedCreateWithoutBookingsInput,\n     +     connectOrCreate: UserCreateOrConnectWithoutBookingsInput,\n     +     connect: UserWhereUniqueInput\n     +   }\n       }\n     })\n\nArgument `user` is missing.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:54:44.286Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: undefined,\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         expiresAt: new Date(\"2026-01-08T11:04:58.033Z\"),\n     +   user: {\n     +     create: UserCreateWithoutBookingsInput | UserUncheckedCreateWithoutBookingsInput,\n     +     connectOrCreate: UserCreateOrConnectWithoutBookingsInput,\n     +     connect: UserWhereUniqueInput\n     +   }\n       }\n     })\n\nArgument `user` is missing.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-08T10:54:58.099Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T10:55:11.139Z"}
+{"bookingId":"695f8d122cd94647f1ef58f3","expiresAt":"2026-01-08T11:05:14.992Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T10:55:15.438Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T10:55:26.890Z"}
+{"bookingId":"695f8d122cd94647f1ef58f3","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T10:55:26.891Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:55:55.580Z"}
+{"count":0,"duration":566,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:57:23.150Z"}
+{"count":0,"duration":69,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:58:22.665Z"}
+{"bookingId":"695f8e025d87f4d9f9c788b8","expiresAt":"2026-01-08T11:09:14.543Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T10:59:14.984Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T10:59:35.190Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:00:35.204Z"}
+{"err":{"body":"\n\n\n","expose":true,"status":400,"statusCode":400,"type":"entity.parse.failed"},"level":"error","message":"Unhandled error","path":"/api/v1/queue/join","timestamp":"2026-01-08T11:01:46.481Z"}
+{"count":0,"duration":574,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:02:31.747Z"}
+{"count":0,"duration":5810,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:03:43.102Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:04:37.356Z"}
+{"categoryId":"695384d72b08ef6fa8441503","level":"error","message":"Cancel pending error Assignment to constant variable.","name":"TypeError","stack":"TypeError: Assignment to constant variable.\n    at cancelPendingBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:82:16)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at authMiddleware (D:\\Projects\\Event Management App\\backend\\middlewares\\auth.js:16:9)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Projects\\Event Management App\\backend\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Projects\\Event Management App\\backend\\node_modules\\router\\index.js:295:15","timestamp":"2026-01-08T11:05:03.299Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T11:05:16.101Z"}
+{"bookingId":"695f8e025d87f4d9f9c788b8","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T11:05:16.102Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:05:37.365Z"}
+{"bookingId":"695f8fa5f9eed752d5430d57","expiresAt":"2026-01-08T11:16:13.015Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T11:06:13.407Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T11:06:25.934Z"}
+{"bookingId":"695f8fa5f9eed752d5430d57","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T11:06:25.935Z"}
+{"bookingId":"695f8fbbf9eed752d5430d59","expiresAt":"2026-01-08T11:16:35.229Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T11:06:35.598Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:06:37.371Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T11:06:44.846Z"}
+{"bookingId":"695f8fbbf9eed752d5430d59","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T11:06:44.847Z"}
+{"bookingId":"695f8ff6f9eed752d5430d5b","expiresAt":"2026-01-08T11:17:34.573Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T11:07:34.975Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:07:37.388Z"}
+{"count":0,"duration":79,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:08:37.419Z"}
+{"count":0,"duration":75,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:09:37.415Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:10:37.397Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-08T11:11:53.982Z"}
+{"bookingId":"695f910593ad071a9d685a0d","expiresAt":"2026-01-08T11:22:05.098Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T11:12:05.777Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T11:12:22.343Z"}
+{"bookingId":"695f910593ad071a9d685a0d","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T11:12:22.344Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:12:31.837Z"}
+{"bookingId":"695f912293ad071a9d685a0f","expiresAt":"2026-01-08T11:22:34.704Z","level":"info","message":"Booking Created","timestamp":"2026-01-08T11:12:35.083Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:13:31.841Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:14:31.848Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:15:31.852Z"}
+{"count":1,"duration":2567,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:18:46.054Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-08T11:18:49.687Z"}
+{"bookingId":"695f912293ad071a9d685a0f","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-08T11:18:49.688Z"}
+{"count":0,"duration":69,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:19:43.567Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:20:43.565Z"}
+{"count":0,"duration":101,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:21:43.613Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:22:43.573Z"}
+{"count":0,"duration":1358,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-08T11:26:55.863Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-17T17:00:35.315Z"}
+{"count":0,"duration":1063,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:02:49.633Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-17T17:02:56.231Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-17T17:03:11.048Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-17T17:03:20.511Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-17T17:03:22.168Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:03:48.637Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:04:48.638Z"}
+{"count":0,"duration":794,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:16:20.691Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:17:19.967Z"}
+{"count":0,"duration":69,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:18:19.976Z"}
+{"count":0,"duration":726,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:20:12.669Z"}
+{"error":"res is not defined","level":"error","message":"Payment Request Failed","timestamp":"2026-01-17T17:21:27.048Z"}
+{"count":0,"duration":699,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:22:27.394Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:23:26.764Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:24:26.776Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:25:26.787Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:26:26.795Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:27:26.805Z"}
+{"count":0,"duration":79,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:28:26.828Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:29:26.815Z"}
+{"count":0,"duration":86,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:30:26.852Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:31:26.838Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:32:26.836Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:33:26.845Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:34:26.854Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:35:26.868Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:36:26.872Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:37:26.886Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:38:26.889Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:39:26.901Z"}
+{"error":"res is not defined","level":"error","message":"Payment Request Failed","timestamp":"2026-01-17T17:40:08.261Z"}
+{"error":"res is not defined","level":"error","message":"Payment Request Failed","timestamp":"2026-01-17T17:41:03.664Z"}
+{"error":"res is not defined","level":"error","message":"Payment Request Failed","timestamp":"2026-01-17T17:41:56.254Z"}
+{"count":0,"duration":1782,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:45:42.415Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:46:40.701Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:47:40.702Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:48:40.700Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:49:40.701Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:50:40.706Z"}
+{"count":0,"duration":80,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:51:40.731Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:52:40.726Z"}
+{"count":0,"duration":166,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:53:40.830Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:54:40.731Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:55:40.731Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:56:40.737Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:57:40.745Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:58:40.753Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T17:59:40.759Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:00:40.758Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:01:40.776Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:02:40.776Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:03:40.784Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:04:40.790Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:05:40.799Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:06:40.804Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:07:40.807Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:08:40.810Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:09:40.813Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:10:40.814Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:11:40.830Z"}
+{"count":0,"duration":85,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:12:40.872Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:13:40.847Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:14:40.849Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:15:40.852Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:16:40.853Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:17:40.867Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:18:40.876Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:19:40.888Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:20:40.893Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:21:40.892Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:22:40.892Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:23:40.897Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:24:40.900Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:25:40.911Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:26:40.915Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:27:40.919Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:28:40.923Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:29:40.923Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:30:40.945Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:31:40.957Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:32:40.956Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:33:40.965Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:34:40.978Z"}
+{"count":0,"duration":67,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-17T18:35:41.004Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-18T05:10:08.355Z"}
+{"err":{"expiredAt":"2026-01-18T02:03:10.000Z","message":"jwt expired","name":"TokenExpiredError"},"level":"error","message":"Invalid token","timestamp":"2026-01-18T05:10:18.410Z"}
+{"count":0,"duration":556,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:11:03.296Z"}
+{"count":0,"duration":1089,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:12:33.258Z"}
+{"count":0,"duration":997,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:13:37.235Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:14:36.292Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:15:36.294Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:16:36.296Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:17:36.298Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:18:36.315Z"}
+{"err":{"expiredAt":"2026-01-18T02:03:10.000Z","message":"jwt expired","name":"TokenExpiredError"},"level":"error","message":"Invalid token","timestamp":"2026-01-18T05:19:31.889Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:19:36.319Z"}
+{"err":{"message":"jwt malformed","name":"JsonWebTokenError"},"level":"error","message":"Invalid token","timestamp":"2026-01-18T05:19:43.507Z"}
+{"err":{"message":"jwt malformed","name":"JsonWebTokenError"},"level":"error","message":"Invalid token","timestamp":"2026-01-18T05:19:44.930Z"}
+{"err":{"message":"jwt malformed","name":"JsonWebTokenError"},"level":"error","message":"Invalid token","timestamp":"2026-01-18T05:19:51.971Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:20:36.319Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:21:36.333Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:22:36.343Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:23:36.349Z"}
+{"count":0,"duration":84,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:24:36.381Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:25:36.355Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:26:36.361Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:27:36.369Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:28:36.373Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:29:36.382Z"}
+{"count":0,"duration":67,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:30:36.401Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:31:36.403Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:32:36.418Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:33:36.420Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:34:36.428Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:35:36.431Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:36:36.430Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:37:36.436Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:38:36.442Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:39:36.450Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:40:36.467Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-18T05:41:32.639Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:41:36.473Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:42:36.479Z"}
+{"count":0,"duration":1003,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:44:22.653Z"}
+{"count":0,"duration":1003,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:45:31.801Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:46:30.855Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:47:30.862Z"}
+{"count":0,"duration":1109,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:51:16.042Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:52:14.994Z"}
+{"count":0,"duration":89,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:53:15.044Z"}
+{"count":0,"duration":97,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:54:15.054Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:55:15.015Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:56:15.028Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:57:15.040Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:58:15.050Z"}
+{"count":0,"duration":105,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T05:59:15.111Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:00:15.070Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:01:15.082Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:02:15.088Z"}
+{"count":0,"duration":106,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:03:15.138Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:04:15.091Z"}
+{"count":0,"duration":108,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:05:15.150Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:06:15.106Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:07:15.114Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:08:15.119Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:09:15.128Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:10:15.121Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:11:15.135Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:12:15.144Z"}
+{"count":0,"duration":171,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:13:15.258Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:14:15.148Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:15:15.146Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:16:15.163Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:17:15.164Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:18:15.178Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:19:15.191Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:20:15.199Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:21:15.207Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:22:15.209Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:23:15.213Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:24:15.215Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:25:15.221Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:26:15.228Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:27:15.232Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:28:15.241Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:29:15.246Z"}
+{"count":0,"duration":1189,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:31:21.469Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:32:20.349Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:33:20.353Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:34:20.359Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:35:20.372Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:36:20.385Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:37:20.387Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:38:20.396Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:39:20.411Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:40:20.422Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:41:20.432Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:42:20.431Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:43:20.439Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:44:20.449Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:45:20.469Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:46:20.475Z"}
+{"count":0,"duration":1010,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:49:36.098Z"}
+{"count":0,"duration":1065,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:51:30.957Z"}
+{"count":0,"duration":1049,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:54:27.020Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:55:26.037Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:56:26.043Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:57:26.060Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:58:26.065Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T06:59:26.070Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:00:26.073Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:01:26.081Z"}
+{"count":0,"duration":202,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:02:26.239Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:03:26.099Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:04:26.102Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:05:26.111Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:06:26.125Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:07:26.128Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:08:26.139Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:09:26.149Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:10:26.157Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:11:26.171Z"}
+{"count":0,"duration":1156,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:13:32.238Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:14:31.143Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:15:31.154Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:16:31.173Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:17:31.176Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:18:31.180Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:19:31.192Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:20:31.204Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:21:31.209Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:22:31.212Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:23:31.211Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:24:31.226Z"}
+{"count":0,"duration":949,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:26:12.395Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:27:11.499Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:28:11.519Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:29:11.529Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:30:11.538Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:31:11.550Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:32:11.562Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:33:11.564Z"}
+{"count":0,"duration":66,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:34:11.581Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:35:11.574Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:36:11.581Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:37:11.589Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:38:11.591Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:39:11.593Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:40:11.609Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:41:11.623Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:42:11.625Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:43:11.634Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-18T07:43:34.711Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:44:11.641Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:45:11.650Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:46:11.653Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:47:11.670Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:48:11.675Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:49:11.688Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:50:11.698Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:51:11.709Z"}
+{"count":0,"duration":83,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:52:11.755Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:53:11.738Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:54:11.751Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:55:11.753Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:56:11.761Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:57:11.776Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:58:11.777Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T07:59:11.787Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:00:11.789Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:01:11.802Z"}
+{"count":0,"duration":1425,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:04:42.444Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:05:41.097Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:06:41.100Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:07:41.104Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:08:41.104Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:09:41.114Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:10:41.128Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-18T08:11:17.388Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-18T08:11:18.568Z"}
+{"count":0,"duration":65,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:11:41.141Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-18T08:12:19.105Z"}
+{"level":"warn","message":"No token provided","timestamp":"2026-01-18T08:12:20.156Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:12:41.151Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-18T08:13:44.734Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:23:59.178Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:13:59.265Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:23:59.588Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:13:59.648Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:23:59.821Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:13:59.881Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:24:00.127Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:14:00.188Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:14:11.402Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:15:11.404Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:16:11.407Z"}
+{"count":0,"duration":66,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:17:11.421Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:27:16.471Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:17:16.530Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:27:16.712Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:17:16.770Z"}
+{"count":0,"duration":955,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:18:38.903Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:19:38.009Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:20:38.019Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:21:38.020Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:21:47.337Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:31:54.975Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:21:55.133Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:31:55.464Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:21:55.528Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:31:55.957Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:21:56.019Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d62b08ef6fa8441500\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:31:56.365Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:21:56.426Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:22:38.031Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:23:38.044Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:24:38.051Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:35:24.273Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:25:24.361Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:35:24.854Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:25:24.910Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:35:25.188Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:25:25.243Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:35:25.407Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:25:25.460Z"}
+{"error":"PrismaClientValidationError: \nInvalid `tx.booking.create()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:38\n\n  56 const now = Date.now();\n  57 const expiresAt = new Date(now + 10 * 60 * 1000);\n  58 \n→ 59 const booking = await tx.booking.create({\n       data: {\n         userId: \"695f4b4b166b7fd62714d9fd\",\n         concertId: \"695384d62b08ef6fa84414ff\",\n         categoryId: \"695384d72b08ef6fa8441503\",\n         seats: 1,\n         status: \"pending\",\n         paymentStatus: \"none\",\n         ~~~~~~~~~~~~~\n         expiresAt: new Date(\"2026-01-18T08:35:25.629Z\"),\n     ?   id?: String,\n     ?   bookedAt?: DateTime\n       }\n     })\n\nUnknown argument `paymentStatus`. Available options are marked with ?.\n    at Nn (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:59:21\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-18T08:25:25.683Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-18T08:26:08.759Z"}
+{"count":0,"duration":816,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:00:30.441Z"}
+{"body":{"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTVmNGI0YjE2NmI3ZmQ2MjcxNGQ5ZmQiLCJpYXQiOjE3Njg3MjQwMjQsImV4cCI6MTc2OTMyODgyNH0.L2SCk31JwO13povzgl5hISbpmIL2QPdmog_npSfS-00"},"error":"Invalid refresh token","level":"error","message":"Refresh token Failed","timestamp":"2026-01-19T05:00:45.773Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Signup attempt","timestamp":"2026-01-19T05:01:17.850Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Your OTP for Verification","timestamp":"2026-01-19T05:01:20.894Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"SignUp Success","timestamp":"2026-01-19T05:01:20.895Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:01:29.688Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Welcome to Our Service","timestamp":"2026-01-19T05:01:44.233Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"OTP Verification Success","timestamp":"2026-01-19T05:01:44.234Z"}
+{"err":{},"level":"error","message":"Get concert Error","timestamp":"2026-01-19T05:01:45.380Z"}
+{"err":{},"level":"error","message":"Get concert Error","timestamp":"2026-01-19T05:01:46.572Z"}
+{"err":{},"level":"error","message":"Get concert Error","timestamp":"2026-01-19T05:02:17.759Z"}
+{"err":{},"level":"error","message":"Get concert Error","timestamp":"2026-01-19T05:02:18.870Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:02:29.680Z"}
+{"err":{},"level":"error","message":"Get concert Error","timestamp":"2026-01-19T05:03:07.821Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:03:29.701Z"}
+{"bookingId":"696dbb5896cd6e5f3a0f4a77","expiresAt":"2026-01-19T05:14:24.258Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:04:24.712Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:04:57.305Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:05:57.310Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:06:57.312Z"}
+{"count":0,"duration":75,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:07:57.351Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:08:57.326Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:09:57.338Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:10:57.343Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:11:57.343Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:12:57.350Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:13:57.347Z"}
+{"count":1,"duration":620,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:14:57.920Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-19T05:15:15.872Z"}
+{"bookingId":"696dbded96cd6e5f3a0f4a79","expiresAt":"2026-01-19T05:25:25.666Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:15:26.108Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:15:57.363Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:16:57.365Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:17:57.372Z"}
+{"bookingId":"696dbeb796cd6e5f3a0f4a7a","expiresAt":"2026-01-19T05:28:47.549Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:18:47.963Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:18:57.383Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:19:57.380Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:20:57.391Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:21:57.400Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:22:57.409Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:23:57.425Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:24:57.431Z"}
+{"count":1,"duration":705,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:25:58.082Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:26:57.443Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:27:57.447Z"}
+{"count":1,"duration":642,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:28:58.042Z"}
+{"bookingId":"696dc12f96cd6e5f3a0f4a7c","expiresAt":"2026-01-19T05:39:19.193Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:29:19.609Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:29:57.454Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:30:57.456Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:31:57.469Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:32:57.470Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:33:57.476Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:34:57.490Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:35:57.498Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:36:57.501Z"}
+{"err":{"expiredAt":"2026-01-18T14:41:32.000Z","message":"jwt expired","name":"TokenExpiredError"},"level":"error","message":"Invalid token","timestamp":"2026-01-19T05:37:21.080Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-19T05:37:32.347Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:37:57.509Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:39:08.168Z"}
+{"bookingId":"696dc39681513cd664eb8611","expiresAt":"2026-01-19T05:49:34.466Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:39:34.860Z"}
+{"count":1,"duration":618,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:40:08.734Z"}
+{"count":0,"duration":78,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:42:59.248Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:43:59.230Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:44:59.243Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:49:10.697Z"}
+{"error":"PrismaClientKnownRequestError: \nInvalid `tx.ticketCategory.update()` invocation in\nD:\\Projects\\Event Management App\\backend\\services\\bookingService.js:71:29\n\n  68   },\n  69 });\n  70 \n→ 71 await tx.ticketCategory.update(\nTransaction failed due to a write conflict or a deadlock. Please retry your transaction\n    at ei.handleRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:7268)\n    at ei.handleAndLogRequestError (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:71:5\n    at async Proxy._transactionWithCallback (D:\\Projects\\Event Management App\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:8120)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-19T05:49:38.707Z"}
+{"bookingId":"696dc5f24ae800ed107377cf","expiresAt":"2026-01-19T05:59:38.401Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T05:49:38.807Z"}
+{"error":"Error: You have an active booking session for this category. Complete payment or wait for release\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:32:11)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-19T05:49:38.958Z"}
+{"error":"Error: You have an active booking session for this category. Complete payment or wait for release\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:32:11)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-19T05:49:39.142Z"}
+{"count":1,"duration":827,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:50:28.976Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:51:28.204Z"}
+{"count":0,"duration":93,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:52:28.257Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:53:54.715Z"}
+{"count":0,"duration":72,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:54:54.735Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:56:57.754Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:57:57.754Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:58:57.761Z"}
+{"count":1,"duration":836,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T05:59:58.557Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:00:57.776Z"}
+{"error":"Error: High demand: Please wait for your slot\n    at createBooking (D:\\Projects\\Event Management App\\backend\\services\\bookingService.js:40:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createBookingCtrl (D:\\Projects\\Event Management App\\backend\\controllers\\bookingController.js:13:21)","level":"error","message":"Create booking error","timestamp":"2026-01-19T06:01:50.421Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:01:57.781Z"}
+{"bookingId":"696dc8d59923aa2263049589","expiresAt":"2026-01-19T06:11:57.912Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T06:01:58.347Z"}
+{"intentId":"pi_3SrBXI0CcLMXzZl50RnH438b","level":"info","message":"Payment intent created","timestamp":"2026-01-19T06:02:00.758Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:02:57.784Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:03:57.794Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:04:57.796Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:05:57.811Z"}
+{"bookingId":"696dca2130294c476ee9455d","expiresAt":"2026-01-19T06:17:29.289Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T06:07:29.672Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:07:56.056Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:08:56.070Z"}
+{"count":0,"duration":77,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:09:56.092Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:10:56.076Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:11:56.081Z"}
+{"count":1,"duration":577,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:12:56.614Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:13:56.099Z"}
+{"count":0,"duration":45,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:14:56.104Z"}
+{"bookingId":"696dcbf430294c476ee94560","expiresAt":"2026-01-19T06:25:16.056Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T06:15:16.459Z"}
+{"count":0,"duration":44,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:15:56.104Z"}
+{"count":0,"duration":408,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:16:56.477Z"}
+{"count":1,"duration":632,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:17:56.712Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:18:56.132Z"}
+{"bookingId":"696dccd430294c476ee94562","expiresAt":"2026-01-19T06:29:00.254Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T06:19:00.671Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:19:56.139Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:22:12.079Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-19T06:23:02.695Z"}
+{"bookingId":"696dccd430294c476ee94562","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T06:23:02.697Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:23:12.079Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:24:12.093Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-19T06:24:16.340Z"}
+{"bookingId":"696dcbf430294c476ee94560","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T06:24:16.341Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:25:12.108Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Signup attempt","timestamp":"2026-01-19T06:25:42.320Z"}
+{"level":"info","message":"Email sent to bwubta22007@brainwareuniversity.ac.in with subject: Your OTP for Verification","timestamp":"2026-01-19T06:25:46.630Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"SignUp Success","timestamp":"2026-01-19T06:25:46.633Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:26:12.100Z"}
+{"error":"Invalid OTP","level":"error","message":"Verify OTP Failed","timestamp":"2026-01-19T06:26:32.976Z"}
+{"level":"info","message":"Email sent to bwubta22007@brainwareuniversity.ac.in with subject: Welcome to Our Service","timestamp":"2026-01-19T06:26:35.499Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"OTP Verification Success","timestamp":"2026-01-19T06:26:35.500Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:27:12.108Z"}
+{"bookingId":"696dceebf21f7e390c0fc666","expiresAt":"2026-01-19T06:37:55.478Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T06:27:55.896Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:28:12.120Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:29:12.131Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:30:12.143Z"}
+{"level":"info","message":"Email sent to bwubta22007@brainwareuniversity.ac.in with subject: Booking Confirmation","timestamp":"2026-01-19T06:30:34.370Z"}
+{"bookingId":"696dceebf21f7e390c0fc666","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T06:30:34.371Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:31:12.147Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:32:12.162Z"}
+{"count":0,"duration":94,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:33:12.214Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:34:12.172Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:35:12.183Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:36:12.199Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:37:12.209Z"}
+{"count":0,"duration":49,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:38:12.205Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:39:12.212Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:40:12.217Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:41:12.225Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:42:12.235Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:43:12.249Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:44:12.254Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:45:12.261Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:46:12.277Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:47:12.285Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:48:12.293Z"}
+{"count":0,"duration":151,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:49:13.041Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:50:12.953Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:51:12.954Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:52:12.973Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:53:12.972Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:54:12.986Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:55:12.998Z"}
+{"count":0,"duration":336,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:56:13.289Z"}
+{"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:57:13.004Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:58:13.022Z"}
+{"count":0,"duration":51,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T06:59:13.030Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:00:13.040Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:01:13.052Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:02:13.060Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:03:13.054Z"}
+{"count":0,"duration":46,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:04:13.067Z"}
+{"count":0,"duration":48,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:05:13.077Z"}
+{"count":0,"duration":47,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:06:13.083Z"}
+{"count":0,"duration":1005,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:11:53.352Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:12:52.415Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:13:52.422Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:14:52.434Z"}
+{"count":0,"duration":110,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:15:52.485Z"}
+{"count":0,"duration":78,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:16:52.459Z"}
+{"count":0,"duration":173,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:17:52.568Z"}
+{"count":0,"duration":123,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:18:52.530Z"}
+{"count":0,"duration":172,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:19:52.582Z"}
+{"count":0,"duration":85,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:20:52.499Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-19T07:21:09.091Z"}
+{"bookingId":"696ddb88f21f7e390c0fc669","expiresAt":"2026-01-19T07:31:44.905Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T07:21:45.443Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:21:52.483Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-19T07:22:21.072Z"}
+{"bookingId":"696ddb88f21f7e390c0fc669","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T07:22:21.073Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:22:52.480Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:23:52.481Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:24:52.503Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:25:52.516Z"}
+{"count":0,"duration":931,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:28:50.753Z"}
+{"count":0,"duration":74,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:29:49.910Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:30:49.905Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:32:38.865Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:33:38.866Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:34:38.872Z"}
+{"count":0,"duration":98,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:35:38.926Z"}
+{"bookingId":"696ddee53a2468894c26a6d5","expiresAt":"2026-01-19T07:46:05.529Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T07:36:06.001Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:36:38.900Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-19T07:36:40.631Z"}
+{"bookingId":"696ddee53a2468894c26a6d5","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T07:36:40.632Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:37:38.901Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:38:38.919Z"}
+{"count":0,"duration":76,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:39:38.942Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:40:38.928Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:41:38.929Z"}
+{"count":0,"duration":62,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:42:38.946Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:43:38.959Z"}
+{"count":0,"duration":137,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:44:39.048Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:45:38.984Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:46:38.987Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:47:39.001Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:48:38.994Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:49:39.011Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:50:39.025Z"}
+{"count":0,"duration":61,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:51:39.030Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:52:39.031Z"}
+{"count":0,"duration":106,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:53:39.091Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:54:39.050Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:55:39.063Z"}
+{"count":0,"duration":2704,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:58:00.444Z"}
+{"count":0,"duration":63,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:58:57.806Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T07:59:57.815Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:00:57.828Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:01:57.836Z"}
+{"count":0,"duration":52,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:02:57.831Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:03:57.842Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:04:57.856Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:05:57.870Z"}
+{"count":0,"duration":80,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:06:57.907Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:07:57.888Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:08:57.902Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:09:57.916Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:10:57.919Z"}
+{"count":0,"duration":58,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:11:57.927Z"}
+{"count":0,"duration":81,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:12:57.956Z"}
+{"count":0,"duration":60,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:13:57.939Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:14:57.942Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:15:57.956Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:16:57.954Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:17:57.963Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:18:57.981Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:19:57.989Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:20:58.012Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:21:58.014Z"}
+{"count":0,"duration":54,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:22:58.019Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:23:58.026Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:24:58.035Z"}
+{"count":0,"duration":53,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:25:58.047Z"}
+{"count":0,"duration":335,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:26:58.333Z"}
+{"bookingId":"696dead13a2468894c26a6d9","expiresAt":"2026-01-19T08:36:57.899Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T08:26:58.377Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-19T08:27:25.574Z"}
+{"email":"bwubta22007@brainwareuniversity.ac.in","level":"info","message":"Login Success","timestamp":"2026-01-19T08:27:39.422Z"}
+{"count":0,"duration":176,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:27:58.177Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:28:58.063Z"}
+{"count":0,"duration":70,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:29:58.093Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:30:58.079Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:31:58.079Z"}
+{"count":0,"duration":57,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:32:58.086Z"}
+{"email":"swarrupak@gmail.com","level":"info","message":"Login Success","timestamp":"2026-01-19T08:33:42.285Z"}
+{"count":0,"duration":59,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:33:58.103Z"}
+{"bookingId":"696dec943a2468894c26a6dd","expiresAt":"2026-01-19T08:44:28.383Z","level":"info","message":"Booking Created","timestamp":"2026-01-19T08:34:28.835Z"}
+{"count":0,"duration":55,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:34:58.101Z"}
+{"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-19T08:35:05.648Z"}
+{"bookingId":"696dec943a2468894c26a6dd","level":"info","message":"Booking Confirmed & Slot Released","timestamp":"2026-01-19T08:35:05.649Z"}
+{"count":0,"duration":64,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:35:58.111Z"}
+{"count":1,"duration":709,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-19T08:36:58.757Z"}

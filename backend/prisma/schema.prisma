@@ -12,13 +12,16 @@ model User {
   id           String    @id @default(auto()) @map("_id") @db.ObjectId
   email        String?   @unique
   password     String?
-  googleId     String?   @unique
+  googleId     String?
   refreshToken String?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
-  profile      Profile?
-  bookings     Booking[]
+
+  profile   Profile?
+  bookings  Booking[]
+  payments  Payment[]   // ✅ ADD THIS
 }
+
 
 model Profile {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -59,18 +62,23 @@ model TicketCategory {
 }
 
 model Booking {
-  id        String         @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String         @db.ObjectId
-  concertId String         @db.ObjectId
-  categoryId String        @db.ObjectId
-  seats     Int
-  status    String
-  bookedAt  DateTime       @default(now())
-  expiresAt DateTime?
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String   @db.ObjectId
+  concertId       String   @db.ObjectId
+  categoryId      String   @db.ObjectId
+  seats           Int
+  status          String   // pending | confirmed | expired | cancelled
+  paymentStatus   String   // none | processing | paid | failed
+  paymentIntentId String?
+  bookedAt        DateTime @default(now())
+  expiresAt       DateTime?
+
   user      User           @relation(fields: [userId], references: [id])
   concert   Concert        @relation(fields: [concertId], references: [id])
   category  TicketCategory @relation(fields: [categoryId], references: [id])
+  payment   Payment?
 }
+
 
 model BookingQueue {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -80,4 +88,19 @@ model BookingQueue {
   enteredAt DateTime @default(now())
   timeSlot  DateTime?
   status    String
+}
+
+model Payment {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String   @db.ObjectId
+  bookingId       String   @unique @db.ObjectId
+  stripeIntentId  String   @unique
+  amount          Int      // stored in paise
+  currency        String   @default("INR")
+  status          String   // created | succeeded | failed
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  booking Booking @relation(fields: [bookingId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
 }

@@ -54,5 +54,61 @@ async function seed() {
   console.log('Seeded concert with categories');
 }
 
-seed().finally(() => prisma.$disconnect());
+async function seedSecondConcert() {
+  const concert = await prisma.concert.create({
+    data: {
+      imageUrl: 'https://images.news18.com/ibnlive/uploads/2023/06/ar-rahman-live-concert.jpg',
+      name: 'AR Rahman Live in Mumbai',
+      date: new Date('2025-11-15T19:30:00Z'),
+      venue: 'DY Patil Stadium, Navi Mumbai',
+      gatesOpenTime: new Date('2025-11-15T16:30:00Z'),
+      about: 'A.R. Rahman brings his legendary live concert experience to Mumbai, featuring iconic hits from Hindi, Tamil, and international cinema with stunning visuals and live orchestration.',
+      languages: 'Hindi, Tamil, English',
+      organizedBy: 'Percept Live',
+      totalSeats: 15000, // will be synced
+      availableSeats: 15000, // will be synced
+    },
+  });
 
+  const categories = [
+    { name: 'fanpit', price: 3500.0, totalSeats: 1500, availableSeats: 1500 },
+    { name: 'diamond', price: 2500.0, totalSeats: 2500, availableSeats: 2500 },
+    { name: 'platinum', price: 1800.0, totalSeats: 4000, availableSeats: 4000 },
+    { name: 'gold', price: 1200.0, totalSeats: 3500, availableSeats: 3500 },
+    { name: 'silver', price: 800.0, totalSeats: 3500, availableSeats: 3500 },
+  ];
+
+  let totalSeatsSum = 0;
+  let availableSeatsSum = 0;
+
+  for (const cat of categories) {
+    await prisma.ticketCategory.create({
+      data: {
+        ...cat,
+        concertId: concert.id,
+      },
+    });
+    totalSeatsSum += cat.totalSeats;
+    availableSeatsSum += cat.availableSeats;
+  }
+
+  await prisma.concert.update({
+    where: { id: concert.id },
+    data: {
+      totalSeats: totalSeatsSum,
+      availableSeats: availableSeatsSum,
+    },
+  });
+
+  console.log('Seeded AR Rahman concert with categories');
+}
+
+
+// seed().finally(() => prisma.$disconnect());
+
+// async function seed() {
+//   await seedFirstConcert();   // your existing one
+//   await seedSecondConcert();  // new one
+// }
+
+seedSecondConcert().finally(() => prisma.$disconnect());

@@ -30,9 +30,17 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
-      "expo-secure-store"
-    ],
+  "expo-router",
+  "expo-secure-store",
+  [
+    "@stripe/stripe-react-native",
+    {
+      "merchantIdentifier": "merchant.com.concertapp",
+      "enableGooglePay": false
+    }
+  ]
+],
+
     "experiments": {
       "typedRoutes": true
     }

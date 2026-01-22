@@ -1,4 +1,12 @@
-import { View, Text, Alert, ActivityIndicator, Pressable, ScrollView, Image } from "react-native";
+import {
+  View,
+  Text,
+  Alert,
+  ActivityIndicator,
+  Pressable,
+  ScrollView,
+  Image,
+} from "react-native";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "expo-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -8,9 +16,16 @@ import {
   confirmBooking,
   createBooking,
   getPendingBooking,
+  
 } from "@/api/bookingApi";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { getQueueStatus, joinQueue } from "@/api/queue";
+import { createPaymentIntent } from "@/api/stripe";
+import {
+  initPaymentSheet,
+  presentPaymentSheet,
+} from "@stripe/stripe-react-native";
 
 interface Booking {
   id: string;
@@ -24,10 +39,8 @@ interface Booking {
 }
 
 interface QueueStatus {
-  position: number;
-  status: string;
-  timeSlot?: Date;
-  highDemand: boolean;
+  status: "none" | "waiting" | "active";
+  position?: number;
 }
 
 export default function ReviewScreen() {
@@ -43,9 +56,11 @@ export default function ReviewScreen() {
   const [expiresAt, setExpiresAt] = useState<Date | null>(null);
   const [secondsLeft, setSecondsLeft] = useState<number>(0);
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null);
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
   const hasInitializedTimer = useRef(false);
-  const hasTriedCreation = useRef(false); // NEW: Track if we've attempted creation
+  const hasTriedCreation = useRef(false);
+  const hasJoinedQueue = useRef(false);
 
   const tickets = useBookingStore((s) => s.tickets);
   const removeTicket = useBookingStore((s) => s.removeTicket);
@@ -56,14 +71,74 @@ export default function ReviewScreen() {
   const categoryId = tickets[0]?.sectionId;
   const totalSeats = tickets.reduce((sum, t) => sum + t.quantity, 0);
 
+  // Queue query with proper error handling
+  const queueQuery = useQuery({
+    queryKey: ["queueStatus"],
+    queryFn: async () => {
+      console.log("🔄 Fetching queue status...");
+      const status = await getQueueStatus();
+      console.log("📥 Queue status received:", status);
+      return status;
+    },
+    refetchInterval: (data) => {
+      // Stop polling if we have a booking or if active
+      if (booking || data?.status === "active") return false;
+      return 3000;
+    },
+    retry: 3,
+    retryDelay: 1000,
+  });
+
+  // Auto-join queue when status is "none"
+  useEffect(() => {
+    console.log("🔍 Queue join check:", {
+      hasData: !!queueQuery.data,
+      status: queueQuery.data?.status,
+      isLoading: queueQuery.isLoading,
+      hasJoined: hasJoinedQueue.current,
+    });
+
+    if (queueQuery.isLoading || hasJoinedQueue.current) {
+      return;
+    }
+
+    if (queueQuery.data?.status === "none") {
+      console.log("🚦 Status is 'none', joining queue now...");
+      hasJoinedQueue.current = true;
+
+      joinQueue()
+        .then((result) => {
+          console.log("✅ Joined queue:", result);
+          // Refetch immediately to get updated status
+          setTimeout(() => {
+            queueQuery.refetch();
+          }, 500);
+        })
+        .catch((err) => {
+          console.error("❌ Failed to join queue:", err);
+          hasJoinedQueue.current = false;
+          Alert.alert("Queue Error", "Failed to join queue. Please try again.");
+        });
+    }
+  }, [queueQuery.data?.status, queueQuery.isLoading]);
+
+  // Update local queue status state
+  useEffect(() => {
+    if (queueQuery.data && !booking) {
+      console.log("📊 Updating queue status state:", queueQuery.data);
+      setQueueStatus(queueQuery.data);
+    }
+  }, [queueQuery.data, booking]);
+
   const { data: pendingBooking, isLoading: pendingLoading } = useQuery({
     queryKey: ["pendingBooking", categoryId],
-    queryFn: () => getPendingBooking(categoryId as string),
+    queryFn: () => getPendingBooking(categoryId as string) || '',
     enabled: !!categoryId,
   });
 
   const createMutation = useMutation({
-    mutationFn: (data: { categoryId: string; seats: number }) => createBooking(data),
+    mutationFn: (data: { categoryId: string; seats: number }) =>
+      createBooking(data),
     onSuccess: (data: Booking) => {
       console.log("✅ Booking created successfully:", data);
       setBooking(data);
@@ -72,37 +147,54 @@ export default function ReviewScreen() {
       queryClient.invalidateQueries({
         queryKey: ["pendingBooking", categoryId],
       });
+      queryClient.removeQueries({ queryKey: ["queueStatus"] });
     },
     onError: (err: any) => {
-      console.error("❌ Create booking error", err.response?.data || err.message);
-      Alert.alert("Error", "Failed to reserve the tickets: " + (err?.message || ""));
-      router.back();
+      console.error(
+        "❌ Create booking error",
+        err.response?.data || err.message,
+      );
+      Alert.alert(
+        "Booking Failed",
+        err.response?.data?.message ||
+          err?.message ||
+          "Failed to reserve tickets",
+      );
+      hasTriedCreation.current = false;
     },
   });
 
   const confirmMutation = useMutation({
     mutationFn: (bookingId: string) => confirmBooking(bookingId),
     onSuccess: (data, bookingId) => {
+      console.log("✅ Booking confirmed successfully");
+      queryClient.removeQueries({ queryKey: ["queueStatus"] });
       clearCart();
       queryClient.invalidateQueries({
         queryKey: ["pendingBooking", categoryId],
       });
+      setIsProcessingPayment(false);
       router.replace(`/book/confirmation?bookingId=${bookingId}`);
     },
     onError: (err: any) => {
-      Alert.alert("Error", "Failed to confirm: " + (err?.message || ""));
+      console.error("❌ Confirm booking error:", err);
+      setIsProcessingPayment(false);
+      Alert.alert(
+        "Booking Confirmation Failed",
+        err?.response?.data?.message || err?.message || "Failed to confirm booking. Please contact support.",
+      );
     },
   });
 
-  // Timer effect - runs when expiresAt is set
+  // Timer effect
   useEffect(() => {
     if (expiresAt) {
       const now = new Date().getTime();
       let diff = Math.floor((expiresAt.getTime() - now) / 1000);
 
       console.log("⏱️ Timer init diff from backend:", diff);
-      
-      if (diff <= -30 || diff <= 0) {
+
+      if (diff <= 0) {
         handleExpiry(false);
         return;
       }
@@ -111,7 +203,9 @@ export default function ReviewScreen() {
       setSecondsLeft(Math.max(0, diff));
 
       const id = setInterval(() => {
-        const updateDiff = Math.floor((expiresAt.getTime() - Date.now()) / 1000);
+        const updateDiff = Math.floor(
+          (expiresAt.getTime() - Date.now()) / 1000,
+        );
         setSecondsLeft(Math.max(0, updateDiff));
 
         if (updateDiff <= 0) {
@@ -128,16 +222,18 @@ export default function ReviewScreen() {
     console.log("⏰ Expiry triggered", { showAlert });
     if (showAlert) {
       Alert.alert(
-        "Time expired",
-        "We have released the tickets you have chosen, please book again"
+        "Time Expired",
+        "Your booking has expired. Please try again.",
       );
     }
     clearCart();
     setBooking(null);
     setExpiresAt(null);
     setQueueStatus(null);
+    setIsProcessingPayment(false);
     hasInitializedTimer.current = false;
     hasTriedCreation.current = false;
+    hasJoinedQueue.current = false;
     queryClient.invalidateQueries({ queryKey: ["pendingBooking"] });
     router.replace("/book");
   };
@@ -147,7 +243,7 @@ export default function ReviewScreen() {
     if (pendingBooking && !booking) {
       const now = new Date().getTime();
       const diff = Math.floor(
-        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
+        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000,
       );
 
       if (diff <= 0) {
@@ -159,19 +255,96 @@ export default function ReviewScreen() {
     }
   }, [pendingBooking, categoryId, booking]);
 
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
     if (!booking?.id) {
       Alert.alert("Error", "No booking to confirm");
       return;
     }
-    confirmMutation.mutate(booking.id);
+
+    if (secondsLeft <= 0) {
+      Alert.alert("Time Expired", "Your booking time has expired");
+      return;
+    }
+
+    setIsProcessingPayment(true);
+
+    try {
+      console.log("💳 Creating payment intent for booking:", booking.id);
+      
+      // 1️⃣ Create PaymentIntent
+      const paymentData = await createPaymentIntent(categoryId);
+      
+      console.log("✅ Payment intent created" ,paymentData);
+
+      if (!paymentData?.paymentIntentClientSecret) {
+        throw new Error("Invalid payment intent response");
+      }
+
+      const { paymentIntentClientSecret } = paymentData;
+
+      // 2️⃣ Init Payment Sheet
+      console.log("🔧 Initializing payment sheet...");
+      const { error: initError } = await initPaymentSheet({
+        merchantDisplayName: "Concert App",
+        
+        paymentIntentClientSecret,
+        allowsDelayedPaymentMethods: true,
+      });
+
+      if (initError) {
+        console.error("❌ Payment sheet init error:", initError);
+        throw new Error(initError.message || "Failed to initialize payment");
+      }
+
+      console.log("✅ Payment sheet initialized");
+
+      // 3️⃣ Present Payment Sheet
+      console.log("📱 Presenting payment sheet...");
+      const { error: payError } = await presentPaymentSheet();
+
+      if (payError) {
+        console.log("⚠️ Payment cancelled or failed:", payError);
+        setIsProcessingPayment(false);
+        
+        // Don't show alert for user cancellation
+        if (payError.code !== 'Canceled') {
+          Alert.alert("Payment Failed", payError.message || "Payment was not completed");
+        }
+        return;
+      }
+
+      console.log("✅ Payment successful, confirming booking...");
+
+      // 4️⃣ Confirm booking on backend
+      confirmMutation.mutate(booking.id);
+
+    } catch (err: any) {
+      console.error("❌ Payment error:", err);
+      setIsProcessingPayment(false);
+      
+      const errorMessage = err?.response?.data?.message 
+        || err?.message 
+        || "Payment failed. Please try again.";
+      
+      Alert.alert("Payment Failed", errorMessage);
+    }
   };
 
   // MAIN LOGIC: Load existing pending OR create new booking
   useEffect(() => {
+    console.log("🔄 Main effect triggered:", {
+      concertLoading,
+      pendingLoading,
+      queueLoading: queueQuery.isLoading,
+      hasBooking: !!booking,
+      hasPending: !!pendingBooking,
+      queueStatus: queueQuery.data?.status,
+      hasTriedCreation: hasTriedCreation.current,
+    });
+
     // Wait for all data to load
     if (concertLoading || pendingLoading || !concert || !categoryId) {
-      console.log("⏳ Waiting for data...", { concertLoading, pendingLoading, concert: !!concert, categoryId });
+      console.log("⏳ Waiting for concert/category data...");
       return;
     }
 
@@ -193,21 +366,16 @@ export default function ReviewScreen() {
       return;
     }
 
-    console.log("🔍 Review mount: checking pending for category", categoryId);
-    console.log("📦 Pending booking:", pendingBooking);
-    console.log("🎫 Tickets in store:", tickets);
-
     // Case 1: Existing pending booking
     if (pendingBooking) {
       const now = new Date().getTime();
       let diff = Math.floor(
-        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
+        (new Date(pendingBooking.expiresAt).getTime() - now) / 1000,
       );
 
       if (diff <= 0) {
         console.log("❌ Mount: Skipping expired pending");
         queryClient.setQueryData(["pendingBooking", categoryId], null);
-        handleExpiry(false);
         return;
       }
 
@@ -219,7 +387,7 @@ export default function ReviewScreen() {
           pendingBooking.category.id,
           pendingBooking.category.name,
           pendingBooking.category.price,
-          pendingBooking.seats
+          pendingBooking.seats,
         );
 
       setBooking(pendingBooking);
@@ -229,16 +397,53 @@ export default function ReviewScreen() {
       return;
     }
 
-    // Case 2: Create new booking
-    // FIXED: Changed tickets.length < 0 to tickets.length > 0
-    if (tickets.length > 0 && totalSeats > 0) {
-      console.log("🚀 Creating new booking:", { categoryId, totalSeats });
+    // Case 2: Create new booking - need queue approval
+    console.log("🚦 Queue check before creation:", {
+      isLoading: queueQuery.isLoading,
+      hasData: !!queueQuery.data,
+      status: queueQuery.data?.status,
+      position: queueQuery.data?.position,
+    });
+
+    // Wait for queue data to load
+    if (queueQuery.isLoading) {
+      console.log("⏳ Queue query still loading...");
+      return;
+    }
+
+    // No queue data yet - shouldn't happen but handle it
+    if (!queueQuery.data) {
+      console.log("⚠️ No queue data available, will retry");
+      return;
+    }
+
+    // Check queue status
+    const currentQueueStatus = queueQuery.data;
+
+    if (currentQueueStatus.status === "waiting") {
+      console.log(
+        `⏳ Waiting in queue... Position: #${currentQueueStatus.position}`,
+      );
+      return;
+    }
+
+    if (currentQueueStatus.status === "none") {
+      console.log("⏳ Queue status is 'none', waiting for join...");
+      return;
+    }
+
+    // ACTIVE → create booking
+    if (currentQueueStatus.status === "active") {
+      if (tickets.length === 0 || totalSeats === 0) {
+        console.log("⚠️ No tickets to create booking with");
+        Alert.alert("No Tickets", "Please select tickets first");
+        router.back();
+        return;
+      }
+
+      console.log("✅ Queue slot active, creating booking");
       hasTriedCreation.current = true;
       createMutation.mutate({ categoryId, seats: totalSeats });
-    } else {
-      console.log("⚠️ No tickets to create booking with");
-      Alert.alert("No Tickets", "Please select tickets first");
-      router.back();
     }
   }, [
     concertLoading,
@@ -250,6 +455,8 @@ export default function ReviewScreen() {
     pendingBooking,
     tickets.length,
     totalSeats,
+    queueQuery.data,
+    queueQuery.isLoading,
   ]);
 
   const mm = Math.floor(secondsLeft / 60)
@@ -285,7 +492,7 @@ export default function ReviewScreen() {
         qty: t.quantity,
         lineTotal: t.price * t.quantity,
       })),
-    [tickets]
+    [tickets],
   );
 
   console.log("📊 Review State:", {
@@ -293,14 +500,25 @@ export default function ReviewScreen() {
     pendingBooking: pendingBooking?.id,
     tickets: tickets.length,
     secondsLeft,
+    queueStatus: queueStatus?.status,
+    queuePosition: queueStatus?.position,
+    isProcessingPayment,
   });
 
-  const isLoading = createMutation.isPending || concertLoading || pendingLoading;
+  const isLoading =
+    createMutation.isPending || concertLoading || pendingLoading;
   const isError = createMutation.isError || !concert || !categoryId;
+
+  // Show queue waiting screen
+  const showQueueWaiting =
+    !booking &&
+    !pendingBooking &&
+    queueStatus?.status === "waiting" &&
+    !createMutation.isPending;
 
   return (
     <SafeAreaView className="flex-1 bg-black">
-      {isLoading ? (
+      {isLoading && !showQueueWaiting ? (
         <View className="flex-1 justify-center items-center">
           <ActivityIndicator size="large" color="#fff" />
           <Text className="text-white mt-2">
@@ -319,11 +537,54 @@ export default function ReviewScreen() {
             <Text className="text-white">Go Back</Text>
           </Pressable>
         </View>
+      ) : showQueueWaiting ? (
+        // Queue waiting screen
+        <View className="flex-1 justify-center items-center px-6">
+          <View className="bg-yellow-900/20 rounded-2xl p-6 items-center border border-yellow-700">
+            <Ionicons name="time-outline" size={64} color="#fbbf24" />
+            <Text className="text-yellow-300 text-2xl font-bold mt-4">
+              High Demand
+            </Text>
+            <Text className="text-yellow-200 text-center mt-2">
+              You're in the queue
+            </Text>
+            {queueStatus?.position && (
+              <View className="mt-4 bg-yellow-900/40 px-6 py-3 rounded-full">
+                <Text className="text-yellow-100 text-lg font-semibold">
+                  Position: #{queueStatus.position}
+                </Text>
+              </View>
+            )}
+            <Text className="text-gray-400 text-center mt-4 text-sm">
+              Please wait, we'll notify you when it's your turn
+            </Text>
+            <ActivityIndicator size="small" color="#fbbf24" className="mt-4" />
+          </View>
+
+          <Pressable
+            onPress={() => router.back()}
+            className="mt-6 px-6 py-3 bg-gray-700 rounded-lg"
+          >
+            <Text className="text-white">Cancel</Text>
+          </Pressable>
+        </View>
       ) : (
         <>
+          {/* Active queue banner */}
+          {queueStatus?.status === "active" && !booking && (
+            <View className="bg-green-900 px-4 py-3 mb-2">
+              <Text className="text-green-300 text-center font-semibold">
+                🎉 It's your turn! Complete your booking now
+              </Text>
+            </View>
+          )}
+
           <View className="px-4 pt-3 pb-2">
             <View className="flex-row items-center">
-              <Pressable className="p-2 rounded-full" onPress={() => router.back()}>
+              <Pressable
+                className="p-2 rounded-full"
+                onPress={() => router.back()}
+              >
                 <Ionicons name="arrow-back" size={24} color="white" />
               </Pressable>
 
@@ -334,17 +595,19 @@ export default function ReviewScreen() {
               </View>
             </View>
 
-            <View className="px-4 mt-3">
-              <View className="bg-[#1a1a1a] rounded-full px-4 py-2 items-center justify-center mb-4">
-                <Text className="text-gray-300">
-                  Complete your booking in{" "}
-                  <Text className="text-green-400 font-semibold">
-                    {mm}:{ss}
-                  </Text>{" "}
-                  mins
-                </Text>
+            {booking && (
+              <View className="px-4 mt-3">
+                <View className="bg-[#1a1a1a] rounded-full px-4 py-2 items-center justify-center mb-4">
+                  <Text className="text-gray-300">
+                    Complete your booking in{" "}
+                    <Text className="text-green-400 font-semibold">
+                      {mm}:{ss}
+                    </Text>{" "}
+                    mins
+                  </Text>
+                </View>
               </View>
-            </View>
+            )}
           </View>
 
           <ScrollView
@@ -359,13 +622,17 @@ export default function ReviewScreen() {
               />
 
               <View className="flex-1">
-                <Text className="text-white font-semibold mb-1">{eventTitle}</Text>
+                <Text className="text-white font-semibold mb-1">
+                  {eventTitle}
+                </Text>
                 <Text className="text-gray-400">{venue}</Text>
               </View>
             </View>
 
             <View className="bg-[#111] border border-gray-800 rounded-2xl px-4 py-4 mb-5">
-              <Text className="text-gray-300 font-semibold mb-3">{datetime}</Text>
+              <Text className="text-gray-300 font-semibold mb-3">
+                {datetime}
+              </Text>
 
               {ticketsSummary.length === 0 ? (
                 <Text className="text-gray-400 mb-3">No tickets selected</Text>
@@ -412,23 +679,34 @@ export default function ReviewScreen() {
 
               <View>
                 <Text className="text-gray-400 text-xs">Pay Using</Text>
-                <Text className="text-white font-semibold">Google Pay UPI</Text>
+                <Text className="text-white font-semibold">Stripe Payment</Text>
               </View>
             </View>
 
             <Pressable
               className={`rounded-full flex-row items-center px-6 py-3 ${
-                confirmMutation.isPending || secondsLeft <= 0 || !booking
+                isProcessingPayment || 
+                confirmMutation.isPending || 
+                secondsLeft <= 0 || 
+                !booking
                   ? "bg-gray-600"
                   : "bg-white"
               }`}
               onPress={handleConfirm}
-              disabled={confirmMutation.isPending || secondsLeft <= 0 || !booking}
+              disabled={
+                isProcessingPayment ||
+                confirmMutation.isPending || 
+                secondsLeft <= 0 || 
+                !booking
+              }
             >
               <View className="mr-4 items-end">
                 <Text
                   className={`text-xs ${
-                    confirmMutation.isPending || secondsLeft <= 0 || !booking
+                    isProcessingPayment || 
+                    confirmMutation.isPending || 
+                    secondsLeft <= 0 || 
+                    !booking
                       ? "text-gray-400"
                       : "text-gray-500"
                   }`}
@@ -437,7 +715,10 @@ export default function ReviewScreen() {
                 </Text>
                 <Text
                   className={`font-semibold text-sm ${
-                    confirmMutation.isPending || secondsLeft <= 0 || !booking
+                    isProcessingPayment || 
+                    confirmMutation.isPending || 
+                    secondsLeft <= 0 || 
+                    !booking
                       ? "text-gray-300"
                       : "text-black"
                   }`}
@@ -445,17 +726,24 @@ export default function ReviewScreen() {
                   Total
                 </Text>
               </View>
-              {confirmMutation.isPending ? (
-                <ActivityIndicator size="small" color="#000" className="mr-2" />
+              {(isProcessingPayment || confirmMutation.isPending) ? (
+                <ActivityIndicator size="small" color="#fff" className="mr-2" />
               ) : null}
               <Text
                 className={`font-semibold ${
-                  confirmMutation.isPending || secondsLeft <= 0 || !booking
+                  isProcessingPayment || 
+                  confirmMutation.isPending || 
+                  secondsLeft <= 0 || 
+                  !booking
                     ? "text-gray-300"
                     : "text-black"
                 }`}
               >
-                {confirmMutation.isPending ? "Confirming..." : "Pay now"}
+                {confirmMutation.isPending 
+                  ? "Confirming..." 
+                  : isProcessingPayment 
+                  ? "Processing..." 
+                  : "Pay now"}
               </Text>
             </Pressable>
           </View>

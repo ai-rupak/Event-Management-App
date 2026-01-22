@@ -19,14 +19,13 @@ router.post(
   authMiddleware,
   authLimiter,
   validationMiddleware(bookingSchema),
-  createBookingCtrl
+  createBookingCtrl,
 );
 
 router.patch("/:id/confirm", authMiddleware, confirmBookingCtrl);
-router.get("/confirmed/:bookingId",authMiddleware,getConfirmedBookingCtrl);
-router.get("/mine",authMiddleware,getUserBookingsCtrl)
+router.get("/confirmed/:bookingId", authMiddleware, getConfirmedBookingCtrl);
+router.get("/mine", authMiddleware, getUserBookingsCtrl);
 router.get("/pending", authMiddleware, getPendingBookingCtrl);
 router.delete("/pending", authMiddleware, cancelPendingBookingCtrl);
-
 
 module.exports = router;

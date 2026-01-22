@@ -1,7 +1,8 @@
 const { SINGLE_CONCERT_ID } = require("../config/constants");
 const logger = require("../config/logger");
 const { sendOrderConfirmation } = require("./emailService");
-const {PrismaClient} = require('@prisma/client');
+const { PrismaClient } = require("@prisma/client");
+const { getQueueStatus, releaseSlot } = require("./queueService");
 
 const prisma = new PrismaClient();
 const getPendingBookings = async (userId, categoryId = null) => {
@@ -29,19 +30,15 @@ const createBooking = async (userId, data) => {
 
   if (pending) {
     throw new Error(
-      "You have an active booking session for this category. Complete payment or wait for release"
+      "You have an active booking session for this category. Complete payment or wait for release",
     );
   }
 
-  // const queueStatus = await getQueueStatus(userId, SINGLE_CONCERT_ID);
+  const queueStatus = await getQueueStatus(userId, SINGLE_CONCERT_ID);
 
-  // if (
-  //   queueStatus.highDemand &&
-  //   (queueStatus.status !== "active" ||
-  //     (queueStatus.timeSlot && new Date() > queueStatus.timeSlot))
-  // ) {
-  //   throw new Error("High Demand : Wait for your slot or it expired");
-  // }
+  if (queueStatus.status !== "active") {
+    throw new Error("High demand: Please wait for your slot");
+  }
 
   return prisma.$transaction(async (tx) => {
     const category = await tx.ticketCategory.findUnique({
@@ -66,6 +63,7 @@ const createBooking = async (userId, data) => {
         categoryId,
         seats,
         status: "pending",
+        paymentStatus: "none",
         expiresAt,
       },
     });
@@ -93,7 +91,7 @@ const confirmBooking = async (bookingId, userId) => {
 
   await prisma.booking.update({
     where: { id: bookingId },
-    data: { status: "confirmed" },
+    data: { status: "confirmed", paymentStatus: "paid" },
   });
 
   const user = await prisma.user.findUnique({
@@ -104,14 +102,16 @@ const confirmBooking = async (bookingId, userId) => {
   const concert = await prisma.concert.findUnique({
     where: { id: booking.concertId },
   });
+  
+  await releaseSlot(userId, booking.concertId);
 
   await sendOrderConfirmation(
     user.email,
     { seats: booking.seats, concertName: concert.name },
-    { name: user.profile?.name || "N/A", email: user.email }
+    { name: user.profile?.name || "N/A", email: user.email },
   );
 
-  logger.info("Booking Confirmed", { bookingId });
+  logger.info("Booking Confirmed & Slot Released", { bookingId });
 };
 
 const cancelPendingBooking = async (userId, categoryId) => {
@@ -173,21 +173,20 @@ const cleanExpiredBookings = async () => {
     {
       timeout: 10000,
       maxWait: 5000,
-    }
+    },
   );
 };
-
 
 const getConfirmedBooking = async (userId, bookingId) => {
   return await prisma.booking.findFirst({
     where: {
       id: bookingId,
       userId,
-      status: "confirmed"
+      status: "confirmed",
     },
     include: {
       category: {
-        select: { id: true, name: true, price: true }
+        select: { id: true, name: true, price: true },
       },
       concert: {
         select: {
@@ -195,12 +194,12 @@ const getConfirmedBooking = async (userId, bookingId) => {
           name: true,
           venue: true,
           date: true,
-          imageUrl: true
-        }
-      }
-    }
-  })
-}
+          imageUrl: true,
+        },
+      },
+    },
+  });
+};
 
 const getUserBookings = async (userId) => {
   return await prisma.booking.findMany({
@@ -230,11 +229,11 @@ const getUserBookings = async (userId) => {
   });
 };
 module.exports = {
-    createBooking,
-    confirmBooking,
-    getPendingBookings,
-    cleanExpiredBookings,
-    cancelPendingBooking,
-    getConfirmedBooking,
-    getUserBookings
+  createBooking,
+  confirmBooking,
+  getPendingBookings,
+  cleanExpiredBookings,
+  cancelPendingBooking,
+  getConfirmedBooking,
+  getUserBookings,
 };
