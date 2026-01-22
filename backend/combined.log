@@ -3131,3 +3131,4 @@
 {"level":"info","message":"Email sent to swarrupak@gmail.com with subject: Booking Confirmation","timestamp":"2026-01-07T11:01:05.883Z"}
 {"bookingId":"695e3ce92d55192d5fdd91be","level":"info","message":"Booking Confirmed","timestamp":"2026-01-07T11:01:05.884Z"}
 {"count":0,"duration":50,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:01:58.374Z"}
+{"count":0,"duration":56,"level":"info","message":"Clean expired bookings","timestamp":"2026-01-07T11:02:58.392Z"}
